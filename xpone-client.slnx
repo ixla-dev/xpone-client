@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Aida.Api.Client/Aida.Api.Client.csproj" />
+    <Project Path="src/IXLA.Samples.XPOneClient/IXLA.Samples.XPOneClient.csproj" />
+  </Folder>
+</Solution>
