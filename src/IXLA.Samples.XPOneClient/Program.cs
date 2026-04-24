@@ -80,9 +80,6 @@ var MLI_PHOTO_FILE_PATH = Path.Combine(ASSETS_ROOT, "MLI_PHOTO.bmp"); // path of
    All errors are reported with corresponding HTTP
    status code, and typed responses.
 
-   Endpoints that return no content or accepted
-
-
 ========================================================*/
 
 var client = new HttpClient(); //
@@ -121,13 +118,11 @@ catch (ApiException e)
     TerminateProgram(E_PERSO_BEGIN_FAILED, e.Message);
 }
 
-Console.ReadLine();
-
 /*============== prepare data + auto-pos ================
 
-   the document is already docked inside the machine
-   we can compute the XY offsets for AutoPos and load
-   data in parallel
+   The document is already docked inside the machine.
+   We can compute the XY offsets for AutoPos and load
+   data (layouts + updates) in parallel
 
 =========================================================*/
 
@@ -138,7 +133,6 @@ var autoPosTask = ComputeAutoPosOffsetsAsync(); // compute offsets
 await Task.WhenAll(loadLayoutsTask, autoPosTask); // wait completion/failure
 var (autoPosPage2, autoPosMli) = await autoPosTask; // get results
 
-Console.ReadLine();
 
 /*============== Mark Layouts ===========================
 
@@ -169,9 +163,6 @@ Console.WriteLine(
 await xpOneApi.MarkLayoutXpOneAsync("PAGE_2", autoPosPage2.OffsetXMillimeters, -autoPosPage2.OffsetYMillimeters);
 await xpOneApi.MarkLayoutXpOneAsync("MLI_PAGE_2", autoPosMli.OffsetXMillimeters, -autoPosMli.OffsetYMillimeters);
 
-Console.ReadLine();
-
-
 /* ============= End Personalization ====================
 
    Tells the machine that we won't be doing anything
@@ -185,8 +176,6 @@ Console.ReadLine();
 await xpOneApi.PersonalizationEndAsync();
 
 Console.WriteLine("Personalization completed");
-Console.ReadLine();
-
 
 return;
 
