@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> GetStateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -62,6 +64,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task PostAidaV1ScannerAsync(CancellationToken cancellationToken = default)
         {
@@ -84,6 +88,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SamLightHeadOpticSettings> ApplyOffsetsFromConfigAsync(CancellationToken cancellationToken = default)
         {
@@ -129,6 +135,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchJobTemplateLayoutAutoPosSettingsDto> FindJobTemplateLayoutAutoPosSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -167,6 +175,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<BarcodeReadResultDto> RunBarcodeReaderAsync(string? scannerId = default, string? cameraId = default, BarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -196,6 +206,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<BarcodeReadSettingsDto> UpdateBarcodeReadSettingsAsync(BarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -241,6 +253,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchBarcodeReadSettingsResultDto> FindBarcodeReadSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -270,6 +284,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<BarcodeReadSettingsDto> CreateBarcodeReadSettingsAsync(CreateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -294,6 +310,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<BarcodeReadSettings> DeleteBarcodeReadSettingsAsync(int barcodeReadSettingsId, CancellationToken cancellationToken = default)
         {
@@ -347,6 +365,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task FindChessBoardCornersAsync(string? scannerId = default, string? cameraId = default, float? patternWidth = default, float? patternHeight = default, float? squareSize = default, float? fovHeightMm = default, float? fovWidthMm = default, CancellationToken cancellationToken = default)
         {
@@ -398,6 +418,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetSnapshotAsync(string format, string? scannerId = default, string? cameraId = default, int? width = default, int? height = default, bool? warpPerspective = default, bool? undistort = default, string? preset = default, CancellationToken cancellationToken = default)
         {
@@ -449,6 +471,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetSnapshotImageAsync(string format, string? scannerId = default, string? cameraId = default, int? width = default, int? height = default, bool? warpPerspective = default, bool? undistort = default, string? preset = default, CancellationToken cancellationToken = default)
         {
@@ -480,6 +504,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetCameraInfoAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -519,6 +545,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task LiveStreamAsync(string? scannerId = default, string? cameraId = default, string? preset = default, bool? warpPerspective = default, CancellationToken cancellationToken = default)
         {
@@ -558,6 +586,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task LiveStreamPageAsync(string? scannerId = default, string? cameraId = default, string? preset = default, bool? warpPerspective = default, CancellationToken cancellationToken = default)
         {
@@ -601,6 +631,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchOcrSettingsResultDto> FindOcrSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -630,6 +662,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<OcrSettingsDto> UpdateOcrSettingsAsync(OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -659,6 +693,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<OcrSettingsDto> CreateOcrSettingsAsync(OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -683,6 +719,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<OcrSettingsDto> DeleteOcrSettingsAsync(int ocrSettingsId, CancellationToken cancellationToken = default)
         {
@@ -745,6 +783,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<OcrResultDto> RunOcrAsync(string? scannerId = default, string? cameraId = default, string? xOcrInspectionId = default, string? xJobId = default, string? xJobInstanceId = default, string? xWorkflowId = default, string? xTraceId = default, bool? xLogOcrOutput = default, OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -774,6 +814,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<string>> GetSupportedOcrLanguagesAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -807,6 +849,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<CameraSettingsDto>> GetCameraPresetsListAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -845,6 +889,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<CameraSettingsDto> UpdateCameraSettingsAsync(string? scannerId = default, string? cameraId = default, CameraSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -883,6 +929,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<CameraSettingsDto> CreateCameraSettingsAsync(string? scannerId = default, string? cameraId = default, CameraSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -916,6 +964,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<CameraSettingsDto> GetCameraPresetByNameAsync(string presetName, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
         {
@@ -949,6 +999,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<CameraSettingsDto> ResetCameraOutputSettingsAsync(string presetName, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
         {
@@ -978,6 +1030,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetCardOrientationCheckConfigurationAsync(CardOrientationCheckConfiguration? body = default, CancellationToken cancellationToken = default)
         {
@@ -1013,6 +1067,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<MarkGroupSummaryModel>> ComputeMarkGroupsWithStrategyAsync(int? jobId = default, int? supportId = default, string? strategy = default, CancellationToken cancellationToken = default)
         {
@@ -1037,6 +1093,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DownloadScannerConfigAsync(CancellationToken cancellationToken = default)
         {
@@ -1059,6 +1117,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ExportScannerConfigAsync(CancellationToken cancellationToken = default)
         {
@@ -1086,6 +1146,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ConnectAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1108,6 +1170,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CreateCalibrationJobAsync(CancellationToken cancellationToken = default)
         {
@@ -1130,6 +1194,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CreateChessBoardJobAsync(CancellationToken cancellationToken = default)
         {
@@ -1157,6 +1223,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CreateLineAsync(CreateLineDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1184,6 +1252,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CreateRectangleAsync(DRectangleDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1211,6 +1281,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DisableDebugModeAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1238,6 +1310,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task EnableDebugModeAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1270,6 +1344,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerEntityDto> UpdateEntityPropertiesAsync(string? scannerId = default, ScannerEntityDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1303,6 +1379,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetEntityPenAsync(string? entityId = default, int? penId = default, CancellationToken cancellationToken = default)
         {
@@ -1334,6 +1412,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ExportLayoutAsync(string? layoutName = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1361,6 +1441,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<string> GetCurrentJobFilenameAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1390,6 +1472,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ScannerHealthCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1417,6 +1501,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> DisableIlluminationAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1446,6 +1532,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> EnableIlluminationAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1475,6 +1563,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<bool> IsConnectedAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -1504,6 +1594,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateBarcodeReadSettingsDto> UpdateJobTemplateBarcodeReadSettingsAsync(JobTemplateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1533,6 +1625,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateBarcodeReadSettingsDto> CreateJobTemplateBarcodeReadSettingsAsync(JobTemplateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1557,6 +1651,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateBarcodeReadSettingsDto> DeleteJobTemplateBarcodeReadSettingsAsync(int jobTemplateBarcodeReadSettingsId, CancellationToken cancellationToken = default)
         {
@@ -1586,6 +1682,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PrintSettingsDto> UpdatePrintSettingsAsync(int jobTemplateInkjetLayoutId, PrintSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1615,6 +1713,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateOcrSettingsDto> UpdateJobTemplateOcrSettingsAsync(JobTemplateOcrSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1644,6 +1744,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateOcrSettingsDto> CreateJobTemplateOcrSettingsAsync(JobTemplateOcrSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -1668,6 +1770,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateOcrSettingsDto> DeleteJobTemplateOcrSettingsAsync(int jobTemplateOcrSettingsId, CancellationToken cancellationToken = default)
         {
@@ -1697,6 +1801,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AssignInkjetLayoutsToJobTemplateAsync(int id, global::System.Collections.Generic.IList<JobTemplateInkjetLayoutDto>? body = default, CancellationToken cancellationToken = default)
         {
@@ -1724,6 +1830,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AssignInkjetLayoutToJobTemplateAsync(int jobTemplateId, string supportSide, int inkjetLayoutId, int? index = default, CancellationToken cancellationToken = default)
         {
@@ -1746,6 +1854,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task RemoveInkjetLayoutFromJobTemplateAsync(int jobTemplateId, int inkjetLayoutId, string supportSide, CancellationToken cancellationToken = default)
         {
@@ -1773,6 +1883,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateSecurityFeaturesSettingsAsync(UpdateSecurityFeatureSettingsRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -1800,6 +1912,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateMirroringSettingsAsync(UpdateMirroringSettingsRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -1827,6 +1941,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateInkjetLayoutPrintSettingsAsync(UpdateJobTemplatePrintParametersRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -1866,6 +1982,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchJobsResultDto> FindJobsAsync(int id, string? scannerId = default, int? page = default, int? pageSize = default, JobStatus? status = default, CancellationToken cancellationToken = default)
         {
@@ -1895,6 +2013,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AssignLayoutsToJobTemplateAsync(int id, global::System.Collections.Generic.IList<JobTemplateLayoutDto>? body = default, CancellationToken cancellationToken = default)
         {
@@ -1942,6 +2062,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LayoutDto> UploadLayoutAndAddToJobTemplateAsync(int id, string? scannerId = default, string? layoutName = default, string? supportSide = default, UploadLayoutAndAddToJobTemplateRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -1976,6 +2098,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> AddMarkGroupAsync(int id, string? scannerId = default, MarkGroup? body = default, CancellationToken cancellationToken = default)
         {
@@ -2000,6 +2124,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task RebuildSjfFileAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -2027,6 +2153,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AssignWebHookTargetAsync(int id, WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2049,6 +2177,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task RemoveWebhooksTargetAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -2076,6 +2206,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AssignLayoutToJobTemplateAsync(int jobTemplateId, string supportSide, int layoutId, int? index = default, CancellationToken cancellationToken = default)
         {
@@ -2098,6 +2230,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task RemoveLayoutFromJobTemplateAsync(int jobTemplateId, int layoutId, string supportSide, CancellationToken cancellationToken = default)
         {
@@ -2157,6 +2291,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchJobTemplatesResultDto> FindJobTemplatesAsync(string? scannerId = default, bool? includeLayouts = default, bool? includeFile = default, bool? includeEntities = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -2191,6 +2327,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> CreateJobTemplateAsync(string? scannerId = default, CreateJobTemplateDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2220,9 +2358,10 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Clears the current job on SCAPS
-        /// </summary>
+        /// <summary>Clears the current job on SCAPS</summary>
+        /// <param name="scannerId"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> ClearAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2256,6 +2395,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<string>> GetJobTemplateNamesAsync(string? propertyName = default, SortDirection? direction = default, CancellationToken cancellationToken = default)
         {
@@ -2285,6 +2426,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> RenameJobTemplateAsync(RenameJobTemplateDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2319,6 +2462,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<NameValidationResultDto> ValidateJobTemplateNameAsync(string? scannerId = default, string? body = default, CancellationToken cancellationToken = default)
         {
@@ -2348,6 +2493,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> GetJobTemplateByIdAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2377,6 +2524,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeleteJobTemplateAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2399,6 +2548,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> InitializeAutoPosAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -2428,6 +2579,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ChipEncodingConfigurationDto> AddJobTemplateChipEncodingConfigurationAsync(int id, ChipEncodingConfigurationDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2457,6 +2610,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TaskDescriptor>> ComputeMarkGroupsAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2490,6 +2645,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchJobLayoutsResultDto> GetAssignedLayoutsByJobTemplateIdAsync(int id, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
         {
@@ -2527,6 +2684,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchLayoutsResultDto> GetAssignableLayoutsByJobTemplateIdAsync(int id, int? page = default, int? pageSize = default, string? supportSide = default, CancellationToken cancellationToken = default)
         {
@@ -2561,6 +2720,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> UpdateMarkGroupsAsync(int id, string? scannerId = default, global::System.Collections.Generic.IList<ScannerMarkGroupDto>? body = default, CancellationToken cancellationToken = default)
         {
@@ -2590,6 +2751,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateDto> RemoveMarkGroupsAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2619,6 +2782,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> MeasureEntitiesMarkTimeAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2648,6 +2813,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SimulateMarkAsync(int id, int cardId, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2675,6 +2842,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task TestSelectionAsync(int id, int cardId, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2707,6 +2876,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateLayoutAutoPosSettingsDto> AddJobTemplateInkjetLayoutAutoPosSettingsAsync(int jobTemplateId, int inkjetLayoutId, string? scannerId = default, CreateJobTemplateLayoutAutoPosSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2741,6 +2912,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<JobTemplateLayoutAutoPosSettingsDto> AddJobTemplateLayoutAutoPosSettingsAsync(int jobTemplateId, int layoutId, string? scannerId = default, CreateJobTemplateLayoutAutoPosSettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2765,6 +2938,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TemplateMatchingConfigurationDto>> GetAutoPosSettingsAsync(int jobTemplateId, int layoutId, CancellationToken cancellationToken = default)
         {
@@ -2794,6 +2969,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SetReadBackConfigurationResponse200> SetReadBackConfigurationAsync(int jobTemplateId, ReadBackConfigurationDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -2818,6 +2995,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeleteReadBackConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
         {
@@ -2845,6 +3024,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> GetLaserBoardStateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2874,6 +3055,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> DisableLaserPenAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2903,6 +3086,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> EnableLaserPenAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -2960,6 +3145,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchLayoutsResultDto> FindLayoutsAsync(string? scannerId = default, bool? includeFile = default, bool? includeEntities = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -2997,6 +3184,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LayoutDto> ImportLayoutFileAsync(string? scannerId = default, string? layoutName = default, string? filename = default, CancellationToken cancellationToken = default)
         {
@@ -3030,6 +3219,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ImportLayoutFileValidationAsync(string? layoutName = default, string? filename = default, CancellationToken cancellationToken = default)
         {
@@ -3057,6 +3248,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LayoutStoreSettings> GetLayoutStoreSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3105,6 +3298,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LayoutDto> UploadLayoutFileAsync(UploadLayoutFileRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -3139,6 +3334,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<NameValidationResultDto> ValidateLayoutNameAsync(string? scannerId = default, string? body = default, CancellationToken cancellationToken = default)
         {
@@ -3168,6 +3365,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LayoutDto> GetLayoutByIdAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3197,6 +3396,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LayoutDto> RenameLayoutAsync(int id, string? name = default, CancellationToken cancellationToken = default)
         {
@@ -3226,6 +3427,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeleteLayoutAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3265,6 +3468,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> LoadJobTemplateAsync(int? id = default, bool? force = default, bool? useLocalCache = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3314,6 +3519,12 @@ namespace Aida.Api.Client {
         /// Loads a job template, fetches the personalization data from the configured data source
         /// and updates entities
         /// </summary>
+        /// <param name="jobId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="scannerId"></param>
+        /// <param name="force"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> LoadJobInstanceAsync(int? jobId = default, int? instanceId = default, string? scannerId = default, bool? force = default, bool? skipUpdate = default, CancellationToken cancellationToken = default)
         {
@@ -3347,6 +3558,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> LoadJobTemplateLayoutAsync(int? jobId = default, int? layoutId = default, CancellationToken cancellationToken = default)
         {
@@ -3392,6 +3605,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> LoadLayoutAsync(string? supportSide = default, string? layoutName = default, bool? overwriteEntities = default, bool? loadMaterials = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3430,6 +3645,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> LoadSjfFileAsync(string? scannerId = default, LoadSjfFileRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -3468,6 +3685,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<MarkEntitiesResult> MarkEntitiesAsync(bool? waitForCompletion = default, string? scannerId = default, MarkEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -3501,6 +3720,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MarkLayoutAsync(string? name = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3528,6 +3749,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MarkRectangleAtAsync(DRectangleDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -3563,6 +3786,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MoveAbsAsync(double? x = default, double? y = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3610,6 +3835,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<PenDto>> GetCurrentPenSetAsync(string? scannerId = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -3634,6 +3861,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ExportPenSetAsync(CancellationToken cancellationToken = default)
         {
@@ -3673,6 +3902,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> ImportPenSetAsync(string? scannerId = default, ImportPenSetRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -3706,6 +3937,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SavePenSetAsync(string? scannerId = default, bool? syncMetadata = default, CancellationToken cancellationToken = default)
         {
@@ -3733,6 +3966,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PenDto> GetLaserPenAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3767,6 +4002,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PenDto> UpdatePenAsync(int id, string? scannerId = default, PenDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -3796,6 +4033,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PixelMapDto> GetPixelMapForPenAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3830,6 +4069,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PixelMapDto> SetPixelMapForPenAsync(int id, string? scannerId = default, PixelMapDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -3859,6 +4100,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetPreviewAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3886,6 +4129,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> DisableRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3915,6 +4160,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> EnableRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3949,6 +4196,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StartRedPointerAsync(string? scannerId = default, StartRedPointerDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -3976,6 +4225,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StopRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -3998,6 +4249,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task RenameMarkersAsync(CancellationToken cancellationToken = default)
         {
@@ -4033,6 +4286,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ResizeEntityAsync(string? name = default, double? width = default, double? height = default, CancellationToken cancellationToken = default)
         {
@@ -4060,6 +4315,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> SaveJobTemplateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4093,6 +4350,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SaveJobTemplateFileAsync(string? file = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4120,6 +4379,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SaveSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4152,6 +4413,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<bool> SelectEntitiesAsync(string? scannerId = default, SelectEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4181,6 +4444,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SamlightOpticSettingsDto> GetSamLightOptionsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4210,6 +4475,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DownloadSettingsFileAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4249,6 +4516,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UploadSettingsFileAsync(string? scannerId = default, UploadSettingsFileRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -4280,6 +4549,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<HomographySettingsDto> GetHomographySettingsAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4318,6 +4589,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<HomographySettingsDto> SaveHomographySettingsAsync(string? cameraId = default, string? scannerId = default, HomographySettingsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4347,6 +4620,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SamLightHeadOpticSettings> GetHeadOpticSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4381,6 +4656,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateSamLightOptionsAsync(string? scannerId = default, SamLightOptionsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4413,6 +4690,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetGainAsync(string? scannerId = default, Vector2d? body = default, CancellationToken cancellationToken = default)
         {
@@ -4440,6 +4719,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SamLightHeadOpticSettings> GetHeadOffsetsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4474,6 +4755,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SamLightHeadOpticSettings> SetOffsetAsync(string? scannerId = default, Vector2d? body = default, CancellationToken cancellationToken = default)
         {
@@ -4508,6 +4791,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetHeadOffsetsAsync(string? scannerId = default, SamLightHeadOffsetsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4530,6 +4815,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ShowApplicationWindowAsync(CancellationToken cancellationToken = default)
         {
@@ -4552,6 +4839,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<string>> ListSjfFilesAsync(CancellationToken cancellationToken = default)
         {
@@ -4581,6 +4870,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> StopMarkingAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4610,6 +4901,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PixelMapDto> GetSystemPixelMapAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -4644,6 +4937,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PixelMapDto> UpdateSystemPixelMapAsync(string? scannerId = default, PixelMapDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4673,6 +4968,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SystemShutdownAsync(bool? confirm = default, CancellationToken cancellationToken = default)
         {
@@ -4705,6 +5002,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> AlignEntitiesAsync(string? scannerId = default, AlignEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4739,6 +5038,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> CenterEntitiesAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4773,6 +5074,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> CenterEntitiesHorizontalAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4807,6 +5110,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> CenterEntitiesVerticalAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4836,6 +5141,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MirrorXAsync(string? entity = default, CancellationToken cancellationToken = default)
         {
@@ -4863,6 +5170,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MirrorYAsync(string? entity = default, CancellationToken cancellationToken = default)
         {
@@ -4895,6 +5204,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> MoveToAsync(string? scannerId = default, MoveToDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4929,6 +5240,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task RotateEntitiesAsync(string? scannerId = default, RotateEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -4964,6 +5277,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ScaleAsync(string? entity = default, double? scaleX = default, double? scaleY = default, CancellationToken cancellationToken = default)
         {
@@ -4996,6 +5311,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<Translation> TranslateEntitiesAsync(string? scannerId = default, TranslateEntitiesDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -5025,6 +5342,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LaserBoardState> SetParameterAsync(int? offset = default, CancellationToken cancellationToken = default)
         {
@@ -5074,9 +5393,10 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Updates entity text/image data
-        /// </summary>
+        /// <summary>Updates entity text/image data</summary>
+        /// <param name="scannerId"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ScannerAppStateDto> UpdateEntitiesAsync(string? scannerId = default, UpdateEntitiesRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -5114,6 +5434,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="NotFoundResult"/>.</exception>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<Stream> GetUndistortedImageAsync(string? preset = default, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
@@ -5165,6 +5487,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IDictionary<string, string>> LoadJobDataAsync(int jobId, int supportId, string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -5187,6 +5511,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ScannerApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetStateResult> GetStateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetStateAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -5215,6 +5541,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.PostAidaV1ScannerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.PostAidaV1ScannerResult> PostAidaV1ScannerAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendPostAidaV1ScannerAsync(cancellationToken).ConfigureAwait(false);
@@ -5234,6 +5562,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ApplyOffsetsFromConfigResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ApplyOffsetsFromConfigResult> ApplyOffsetsFromConfigAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendApplyOffsetsFromConfigAsync(cancellationToken).ConfigureAwait(false);
@@ -5262,6 +5592,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindJobTemplateLayoutAutoPosSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindJobTemplateLayoutAutoPosSettingsResult> FindJobTemplateLayoutAutoPosSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindJobTemplateLayoutAutoPosSettingsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -5290,6 +5622,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RunBarcodeReaderResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RunBarcodeReaderResult> RunBarcodeReaderAsync(string? scannerId = default, string? cameraId = default, BarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRunBarcodeReaderAsync(scannerId, cameraId, body, cancellationToken).ConfigureAwait(false);
@@ -5318,6 +5652,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateBarcodeReadSettingsResult> UpdateBarcodeReadSettingsAsync(BarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateBarcodeReadSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -5346,6 +5682,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindBarcodeReadSettingsResult> FindBarcodeReadSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindBarcodeReadSettingsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -5374,6 +5712,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateBarcodeReadSettingsResult> CreateBarcodeReadSettingsAsync(CreateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateBarcodeReadSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -5402,6 +5742,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteBarcodeReadSettingsResult> DeleteBarcodeReadSettingsAsync(int barcodeReadSettingsId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteBarcodeReadSettingsAsync(barcodeReadSettingsId, cancellationToken).ConfigureAwait(false);
@@ -5430,6 +5772,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindChessBoardCornersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindChessBoardCornersResult> FindChessBoardCornersAsync(string? scannerId = default, string? cameraId = default, float? patternWidth = default, float? patternHeight = default, float? squareSize = default, float? fovHeightMm = default, float? fovWidthMm = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindChessBoardCornersAsync(scannerId, cameraId, patternWidth, patternHeight, squareSize, fovHeightMm, fovWidthMm, cancellationToken).ConfigureAwait(false);
@@ -5449,6 +5793,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSnapshotResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSnapshotResult> GetSnapshotAsync(string format, string? scannerId = default, string? cameraId = default, int? width = default, int? height = default, bool? warpPerspective = default, bool? undistort = default, string? preset = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSnapshotAsync(format, scannerId, cameraId, width, height, warpPerspective, undistort, preset, cancellationToken).ConfigureAwait(false);
@@ -5468,6 +5814,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSnapshotImageResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSnapshotImageResult> GetSnapshotImageAsync(string format, string? scannerId = default, string? cameraId = default, int? width = default, int? height = default, bool? warpPerspective = default, bool? undistort = default, string? preset = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSnapshotImageAsync(format, scannerId, cameraId, width, height, warpPerspective, undistort, preset, cancellationToken).ConfigureAwait(false);
@@ -5487,6 +5835,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetCameraInfoResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetCameraInfoResult> GetCameraInfoAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetCameraInfoAsync(cameraId, scannerId, cancellationToken).ConfigureAwait(false);
@@ -5506,6 +5856,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LiveStreamResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LiveStreamResult> LiveStreamAsync(string? scannerId = default, string? cameraId = default, string? preset = default, bool? warpPerspective = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLiveStreamAsync(scannerId, cameraId, preset, warpPerspective, cancellationToken).ConfigureAwait(false);
@@ -5525,6 +5877,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LiveStreamPageResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LiveStreamPageResult> LiveStreamPageAsync(string? scannerId = default, string? cameraId = default, string? preset = default, bool? warpPerspective = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLiveStreamPageAsync(scannerId, cameraId, preset, warpPerspective, cancellationToken).ConfigureAwait(false);
@@ -5544,6 +5898,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindOcrSettingsResult> FindOcrSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindOcrSettingsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -5572,6 +5928,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateOcrSettingsResult> UpdateOcrSettingsAsync(OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateOcrSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -5600,6 +5958,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateOcrSettingsResult> CreateOcrSettingsAsync(OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateOcrSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -5628,6 +5988,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteOcrSettingsResult> DeleteOcrSettingsAsync(int ocrSettingsId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteOcrSettingsAsync(ocrSettingsId, cancellationToken).ConfigureAwait(false);
@@ -5656,6 +6018,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RunOcrResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RunOcrResult> RunOcrAsync(string? scannerId = default, string? cameraId = default, string? xOcrInspectionId = default, string? xJobId = default, string? xJobInstanceId = default, string? xWorkflowId = default, string? xTraceId = default, bool? xLogOcrOutput = default, OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRunOcrAsync(scannerId, cameraId, xOcrInspectionId, xJobId, xJobInstanceId, xWorkflowId, xTraceId, xLogOcrOutput, body, cancellationToken).ConfigureAwait(false);
@@ -5684,6 +6048,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSupportedOcrLanguagesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSupportedOcrLanguagesResult> GetSupportedOcrLanguagesAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSupportedOcrLanguagesAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -5712,6 +6078,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetCameraPresetsListResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetCameraPresetsListResult> GetCameraPresetsListAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetCameraPresetsListAsync(cameraId, scannerId, cancellationToken).ConfigureAwait(false);
@@ -5740,6 +6108,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateCameraSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateCameraSettingsResult> UpdateCameraSettingsAsync(string? scannerId = default, string? cameraId = default, CameraSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateCameraSettingsAsync(scannerId, cameraId, body, cancellationToken).ConfigureAwait(false);
@@ -5768,6 +6138,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateCameraSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateCameraSettingsResult> CreateCameraSettingsAsync(string? scannerId = default, string? cameraId = default, CameraSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateCameraSettingsAsync(scannerId, cameraId, body, cancellationToken).ConfigureAwait(false);
@@ -5796,6 +6168,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetCameraPresetByNameResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetCameraPresetByNameResult> GetCameraPresetByNameAsync(string presetName, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetCameraPresetByNameAsync(presetName, scannerId, cameraId, cancellationToken).ConfigureAwait(false);
@@ -5824,6 +6198,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ResetCameraOutputSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ResetCameraOutputSettingsResult> ResetCameraOutputSettingsAsync(string presetName, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendResetCameraOutputSettingsAsync(presetName, scannerId, cameraId, cancellationToken).ConfigureAwait(false);
@@ -5852,6 +6228,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetCardOrientationCheckConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetCardOrientationCheckConfigurationResult> SetCardOrientationCheckConfigurationAsync(CardOrientationCheckConfiguration? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetCardOrientationCheckConfigurationAsync(body, cancellationToken).ConfigureAwait(false);
@@ -5871,6 +6249,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ComputeMarkGroupsWithStrategyResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ComputeMarkGroupsWithStrategyResult> ComputeMarkGroupsWithStrategyAsync(int? jobId = default, int? supportId = default, string? strategy = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendComputeMarkGroupsWithStrategyAsync(jobId, supportId, strategy, cancellationToken).ConfigureAwait(false);
@@ -5899,6 +6279,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DownloadScannerConfigResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DownloadScannerConfigResult> DownloadScannerConfigAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDownloadScannerConfigAsync(cancellationToken).ConfigureAwait(false);
@@ -5918,6 +6300,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ExportScannerConfigResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ExportScannerConfigResult> ExportScannerConfigAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendExportScannerConfigAsync(cancellationToken).ConfigureAwait(false);
@@ -5937,6 +6321,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ConnectResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ConnectResult> ConnectAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendConnectAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -5956,6 +6342,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateCalibrationJobResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateCalibrationJobResult> CreateCalibrationJobAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateCalibrationJobAsync(cancellationToken).ConfigureAwait(false);
@@ -5975,6 +6363,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateChessBoardJobResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateChessBoardJobResult> CreateChessBoardJobAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateChessBoardJobAsync(cancellationToken).ConfigureAwait(false);
@@ -5994,6 +6384,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateLineResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateLineResult> CreateLineAsync(CreateLineDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateLineAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6013,6 +6405,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateRectangleResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateRectangleResult> CreateRectangleAsync(DRectangleDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateRectangleAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6032,6 +6426,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DisableDebugModeResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DisableDebugModeResult> DisableDebugModeAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDisableDebugModeAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6051,6 +6447,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EnableDebugModeResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EnableDebugModeResult> EnableDebugModeAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEnableDebugModeAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6070,6 +6468,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateEntityPropertiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateEntityPropertiesResult> UpdateEntityPropertiesAsync(string? scannerId = default, ScannerEntityDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateEntityPropertiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -6098,6 +6498,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetEntityPenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetEntityPenResult> SetEntityPenAsync(string? entityId = default, int? penId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetEntityPenAsync(entityId, penId, cancellationToken).ConfigureAwait(false);
@@ -6117,6 +6519,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ExportLayoutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ExportLayoutResult> ExportLayoutAsync(string? layoutName = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendExportLayoutAsync(layoutName, scannerId, cancellationToken).ConfigureAwait(false);
@@ -6136,6 +6540,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetCurrentJobFilenameResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetCurrentJobFilenameResult> GetCurrentJobFilenameAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetCurrentJobFilenameAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6164,6 +6570,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ScannerHealthCheckResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ScannerHealthCheckResult> ScannerHealthCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendScannerHealthCheckAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6183,6 +6591,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DisableIlluminationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DisableIlluminationResult> DisableIlluminationAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDisableIlluminationAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6211,6 +6621,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EnableIlluminationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EnableIlluminationResult> EnableIlluminationAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEnableIlluminationAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6239,6 +6651,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.IsConnectedResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.IsConnectedResult> IsConnectedAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendIsConnectedAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6267,6 +6681,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateJobTemplateBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateJobTemplateBarcodeReadSettingsResult> UpdateJobTemplateBarcodeReadSettingsAsync(JobTemplateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateJobTemplateBarcodeReadSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6295,6 +6711,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateJobTemplateBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateJobTemplateBarcodeReadSettingsResult> CreateJobTemplateBarcodeReadSettingsAsync(JobTemplateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateJobTemplateBarcodeReadSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6323,6 +6741,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteJobTemplateBarcodeReadSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteJobTemplateBarcodeReadSettingsResult> DeleteJobTemplateBarcodeReadSettingsAsync(int jobTemplateBarcodeReadSettingsId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteJobTemplateBarcodeReadSettingsAsync(jobTemplateBarcodeReadSettingsId, cancellationToken).ConfigureAwait(false);
@@ -6351,6 +6771,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdatePrintSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdatePrintSettingsResult> UpdatePrintSettingsAsync(int jobTemplateInkjetLayoutId, PrintSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdatePrintSettingsAsync(jobTemplateInkjetLayoutId, body, cancellationToken).ConfigureAwait(false);
@@ -6379,6 +6801,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateJobTemplateOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateJobTemplateOcrSettingsResult> UpdateJobTemplateOcrSettingsAsync(JobTemplateOcrSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateJobTemplateOcrSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6407,6 +6831,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateJobTemplateOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateJobTemplateOcrSettingsResult> CreateJobTemplateOcrSettingsAsync(JobTemplateOcrSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateJobTemplateOcrSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6435,6 +6861,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteJobTemplateOcrSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteJobTemplateOcrSettingsResult> DeleteJobTemplateOcrSettingsAsync(int jobTemplateOcrSettingsId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteJobTemplateOcrSettingsAsync(jobTemplateOcrSettingsId, cancellationToken).ConfigureAwait(false);
@@ -6463,6 +6891,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AssignInkjetLayoutsToJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AssignInkjetLayoutsToJobTemplateResult> AssignInkjetLayoutsToJobTemplateAsync(int id, global::System.Collections.Generic.IList<JobTemplateInkjetLayoutDto>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAssignInkjetLayoutsToJobTemplateAsync(id, body, cancellationToken).ConfigureAwait(false);
@@ -6482,6 +6912,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AssignInkjetLayoutToJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AssignInkjetLayoutToJobTemplateResult> AssignInkjetLayoutToJobTemplateAsync(int jobTemplateId, string supportSide, int inkjetLayoutId, int? index = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAssignInkjetLayoutToJobTemplateAsync(jobTemplateId, supportSide, inkjetLayoutId, index, cancellationToken).ConfigureAwait(false);
@@ -6501,6 +6933,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RemoveInkjetLayoutFromJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RemoveInkjetLayoutFromJobTemplateResult> RemoveInkjetLayoutFromJobTemplateAsync(int jobTemplateId, int inkjetLayoutId, string supportSide, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRemoveInkjetLayoutFromJobTemplateAsync(jobTemplateId, inkjetLayoutId, supportSide, cancellationToken).ConfigureAwait(false);
@@ -6520,6 +6954,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateSecurityFeaturesSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateSecurityFeaturesSettingsResult> UpdateSecurityFeaturesSettingsAsync(UpdateSecurityFeatureSettingsRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateSecurityFeaturesSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6539,6 +6975,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateMirroringSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateMirroringSettingsResult> UpdateMirroringSettingsAsync(UpdateMirroringSettingsRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateMirroringSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6558,6 +6996,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateInkjetLayoutPrintSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateInkjetLayoutPrintSettingsResult> UpdateInkjetLayoutPrintSettingsAsync(UpdateJobTemplatePrintParametersRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateInkjetLayoutPrintSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6577,6 +7017,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindJobsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindJobsResult> FindJobsAsync(int id, string? scannerId = default, int? page = default, int? pageSize = default, JobStatus? status = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindJobsAsync(id, scannerId, page, pageSize, status, cancellationToken).ConfigureAwait(false);
@@ -6605,6 +7047,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AssignLayoutsToJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AssignLayoutsToJobTemplateResult> AssignLayoutsToJobTemplateAsync(int id, global::System.Collections.Generic.IList<JobTemplateLayoutDto>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAssignLayoutsToJobTemplateAsync(id, body, cancellationToken).ConfigureAwait(false);
@@ -6624,6 +7068,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UploadLayoutAndAddToJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UploadLayoutAndAddToJobTemplateResult> UploadLayoutAndAddToJobTemplateAsync(int id, string? scannerId = default, string? layoutName = default, string? supportSide = default, UploadLayoutAndAddToJobTemplateRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUploadLayoutAndAddToJobTemplateAsync(id, scannerId, layoutName, supportSide, body, cancellationToken).ConfigureAwait(false);
@@ -6652,6 +7098,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AddMarkGroupResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AddMarkGroupResult> AddMarkGroupAsync(int id, string? scannerId = default, MarkGroup? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAddMarkGroupAsync(id, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -6680,6 +7128,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RebuildSjfFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RebuildSjfFileResult> RebuildSjfFileAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRebuildSjfFileAsync(id, cancellationToken).ConfigureAwait(false);
@@ -6699,6 +7149,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AssignWebHookTargetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AssignWebHookTargetResult> AssignWebHookTargetAsync(int id, WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAssignWebHookTargetAsync(id, body, cancellationToken).ConfigureAwait(false);
@@ -6718,6 +7170,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RemoveWebhooksTargetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RemoveWebhooksTargetResult> RemoveWebhooksTargetAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRemoveWebhooksTargetAsync(id, cancellationToken).ConfigureAwait(false);
@@ -6737,6 +7191,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AssignLayoutToJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AssignLayoutToJobTemplateResult> AssignLayoutToJobTemplateAsync(int jobTemplateId, string supportSide, int layoutId, int? index = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAssignLayoutToJobTemplateAsync(jobTemplateId, supportSide, layoutId, index, cancellationToken).ConfigureAwait(false);
@@ -6756,6 +7212,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RemoveLayoutFromJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RemoveLayoutFromJobTemplateResult> RemoveLayoutFromJobTemplateAsync(int jobTemplateId, int layoutId, string supportSide, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRemoveLayoutFromJobTemplateAsync(jobTemplateId, layoutId, supportSide, cancellationToken).ConfigureAwait(false);
@@ -6775,6 +7233,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindJobTemplatesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindJobTemplatesResult> FindJobTemplatesAsync(string? scannerId = default, bool? includeLayouts = default, bool? includeFile = default, bool? includeEntities = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindJobTemplatesAsync(scannerId, includeLayouts, includeFile, includeEntities, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -6803,6 +7263,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateJobTemplateResult> CreateJobTemplateAsync(string? scannerId = default, CreateJobTemplateDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateJobTemplateAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -6831,9 +7293,10 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Clears the current job on SCAPS
-            /// </summary>
+            /// <summary>Clears the current job on SCAPS</summary>
+            /// <param name="scannerId"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ClearResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ClearResult> ClearAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendClearAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -6862,6 +7325,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetJobTemplateNamesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetJobTemplateNamesResult> GetJobTemplateNamesAsync(string? propertyName = default, SortDirection? direction = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetJobTemplateNamesAsync(propertyName, direction, cancellationToken).ConfigureAwait(false);
@@ -6890,6 +7355,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RenameJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RenameJobTemplateResult> RenameJobTemplateAsync(RenameJobTemplateDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRenameJobTemplateAsync(body, cancellationToken).ConfigureAwait(false);
@@ -6918,6 +7385,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ValidateJobTemplateNameResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ValidateJobTemplateNameResult> ValidateJobTemplateNameAsync(string? scannerId = default, string? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendValidateJobTemplateNameAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -6946,6 +7415,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetJobTemplateByIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetJobTemplateByIdResult> GetJobTemplateByIdAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetJobTemplateByIdAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -6974,6 +7445,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteJobTemplateResult> DeleteJobTemplateAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteJobTemplateAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -6993,6 +7466,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.InitializeAutoPosResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.InitializeAutoPosResult> InitializeAutoPosAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendInitializeAutoPosAsync(id, cancellationToken).ConfigureAwait(false);
@@ -7021,6 +7496,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AddJobTemplateChipEncodingConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AddJobTemplateChipEncodingConfigurationResult> AddJobTemplateChipEncodingConfigurationAsync(int id, ChipEncodingConfigurationDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAddJobTemplateChipEncodingConfigurationAsync(id, body, cancellationToken).ConfigureAwait(false);
@@ -7049,6 +7526,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ComputeMarkGroupsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ComputeMarkGroupsResult> ComputeMarkGroupsAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendComputeMarkGroupsAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7077,6 +7556,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAssignedLayoutsByJobTemplateIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAssignedLayoutsByJobTemplateIdResult> GetAssignedLayoutsByJobTemplateIdAsync(int id, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAssignedLayoutsByJobTemplateIdAsync(id, page, pageSize, cancellationToken).ConfigureAwait(false);
@@ -7105,6 +7586,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAssignableLayoutsByJobTemplateIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAssignableLayoutsByJobTemplateIdResult> GetAssignableLayoutsByJobTemplateIdAsync(int id, int? page = default, int? pageSize = default, string? supportSide = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAssignableLayoutsByJobTemplateIdAsync(id, page, pageSize, supportSide, cancellationToken).ConfigureAwait(false);
@@ -7133,6 +7616,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateMarkGroupsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateMarkGroupsResult> UpdateMarkGroupsAsync(int id, string? scannerId = default, global::System.Collections.Generic.IList<ScannerMarkGroupDto>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateMarkGroupsAsync(id, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -7161,6 +7646,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RemoveMarkGroupsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RemoveMarkGroupsResult> RemoveMarkGroupsAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRemoveMarkGroupsAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7189,6 +7676,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MeasureEntitiesMarkTimeResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MeasureEntitiesMarkTimeResult> MeasureEntitiesMarkTimeAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMeasureEntitiesMarkTimeAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7217,6 +7706,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SimulateMarkResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SimulateMarkResult> SimulateMarkAsync(int id, int cardId, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSimulateMarkAsync(id, cardId, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7236,6 +7727,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.TestSelectionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.TestSelectionResult> TestSelectionAsync(int id, int cardId, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendTestSelectionAsync(id, cardId, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7255,6 +7748,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AddJobTemplateInkjetLayoutAutoPosSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AddJobTemplateInkjetLayoutAutoPosSettingsResult> AddJobTemplateInkjetLayoutAutoPosSettingsAsync(int jobTemplateId, int inkjetLayoutId, string? scannerId = default, CreateJobTemplateLayoutAutoPosSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAddJobTemplateInkjetLayoutAutoPosSettingsAsync(jobTemplateId, inkjetLayoutId, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -7283,6 +7778,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AddJobTemplateLayoutAutoPosSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AddJobTemplateLayoutAutoPosSettingsResult> AddJobTemplateLayoutAutoPosSettingsAsync(int jobTemplateId, int layoutId, string? scannerId = default, CreateJobTemplateLayoutAutoPosSettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAddJobTemplateLayoutAutoPosSettingsAsync(jobTemplateId, layoutId, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -7311,6 +7808,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAutoPosSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAutoPosSettingsResult> GetAutoPosSettingsAsync(int jobTemplateId, int layoutId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAutoPosSettingsAsync(jobTemplateId, layoutId, cancellationToken).ConfigureAwait(false);
@@ -7339,6 +7838,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetReadBackConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetReadBackConfigurationResult> SetReadBackConfigurationAsync(int jobTemplateId, ReadBackConfigurationDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetReadBackConfigurationAsync(jobTemplateId, body, cancellationToken).ConfigureAwait(false);
@@ -7367,6 +7868,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteReadBackConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteReadBackConfigurationResult> DeleteReadBackConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteReadBackConfigurationAsync(jobTemplateId, cancellationToken).ConfigureAwait(false);
@@ -7386,6 +7889,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLaserBoardStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLaserBoardStateResult> GetLaserBoardStateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLaserBoardStateAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -7414,6 +7919,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DisableLaserPenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DisableLaserPenResult> DisableLaserPenAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDisableLaserPenAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -7442,6 +7949,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EnableLaserPenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EnableLaserPenResult> EnableLaserPenAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEnableLaserPenAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -7470,6 +7979,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindLayoutsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindLayoutsResult> FindLayoutsAsync(string? scannerId = default, bool? includeFile = default, bool? includeEntities = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindLayoutsAsync(scannerId, includeFile, includeEntities, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -7498,6 +8009,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ImportLayoutFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ImportLayoutFileResult> ImportLayoutFileAsync(string? scannerId = default, string? layoutName = default, string? filename = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendImportLayoutFileAsync(scannerId, layoutName, filename, cancellationToken).ConfigureAwait(false);
@@ -7526,6 +8039,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ImportLayoutFileValidationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ImportLayoutFileValidationResult> ImportLayoutFileValidationAsync(string? layoutName = default, string? filename = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendImportLayoutFileValidationAsync(layoutName, filename, cancellationToken).ConfigureAwait(false);
@@ -7545,6 +8060,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLayoutStoreSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLayoutStoreSettingsResult> GetLayoutStoreSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLayoutStoreSettingsAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -7573,6 +8090,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UploadLayoutFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UploadLayoutFileResult> UploadLayoutFileAsync(UploadLayoutFileRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUploadLayoutFileAsync(body, cancellationToken).ConfigureAwait(false);
@@ -7601,6 +8120,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ValidateLayoutNameResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ValidateLayoutNameResult> ValidateLayoutNameAsync(string? scannerId = default, string? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendValidateLayoutNameAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -7629,6 +8150,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLayoutByIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLayoutByIdResult> GetLayoutByIdAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLayoutByIdAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7657,6 +8180,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RenameLayoutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RenameLayoutResult> RenameLayoutAsync(int id, string? name = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRenameLayoutAsync(id, name, cancellationToken).ConfigureAwait(false);
@@ -7685,6 +8210,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteLayoutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteLayoutResult> DeleteLayoutAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteLayoutAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7704,6 +8231,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadJobTemplateResult> LoadJobTemplateAsync(int? id = default, bool? force = default, bool? useLocalCache = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadJobTemplateAsync(id, force, useLocalCache, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7736,6 +8265,12 @@ namespace Aida.Api.Client {
             /// Loads a job template, fetches the personalization data from the configured data source
             /// and updates entities
             /// </summary>
+            /// <param name="jobId"></param>
+            /// <param name="instanceId"></param>
+            /// <param name="scannerId"></param>
+            /// <param name="force"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadJobInstanceResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadJobInstanceResult> LoadJobInstanceAsync(int? jobId = default, int? instanceId = default, string? scannerId = default, bool? force = default, bool? skipUpdate = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadJobInstanceAsync(jobId, instanceId, scannerId, force, skipUpdate, cancellationToken).ConfigureAwait(false);
@@ -7764,6 +8299,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadJobTemplateLayoutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadJobTemplateLayoutResult> LoadJobTemplateLayoutAsync(int? jobId = default, int? layoutId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadJobTemplateLayoutAsync(jobId, layoutId, cancellationToken).ConfigureAwait(false);
@@ -7792,6 +8329,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadLayoutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadLayoutResult> LoadLayoutAsync(string? supportSide = default, string? layoutName = default, bool? overwriteEntities = default, bool? loadMaterials = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadLayoutAsync(supportSide, layoutName, overwriteEntities, loadMaterials, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7820,6 +8359,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadSjfFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadSjfFileResult> LoadSjfFileAsync(string? scannerId = default, LoadSjfFileRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadSjfFileAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -7848,6 +8389,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MarkEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MarkEntitiesResult> MarkEntitiesAsync(bool? waitForCompletion = default, string? scannerId = default, MarkEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMarkEntitiesAsync(waitForCompletion, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -7876,6 +8419,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MarkLayoutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MarkLayoutResult> MarkLayoutAsync(string? name = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMarkLayoutAsync(name, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7895,6 +8440,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MarkRectangleAtResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MarkRectangleAtResult> MarkRectangleAtAsync(DRectangleDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMarkRectangleAtAsync(body, cancellationToken).ConfigureAwait(false);
@@ -7914,6 +8461,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MoveAbsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MoveAbsResult> MoveAbsAsync(double? x = default, double? y = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMoveAbsAsync(x, y, scannerId, cancellationToken).ConfigureAwait(false);
@@ -7933,6 +8482,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetCurrentPenSetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetCurrentPenSetResult> GetCurrentPenSetAsync(string? scannerId = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetCurrentPenSetAsync(scannerId, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -7961,6 +8512,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ExportPenSetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ExportPenSetResult> ExportPenSetAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendExportPenSetAsync(cancellationToken).ConfigureAwait(false);
@@ -7980,6 +8533,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ImportPenSetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ImportPenSetResult> ImportPenSetAsync(string? scannerId = default, ImportPenSetRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendImportPenSetAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8008,6 +8563,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SavePenSetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SavePenSetResult> SavePenSetAsync(string? scannerId = default, bool? syncMetadata = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSavePenSetAsync(scannerId, syncMetadata, cancellationToken).ConfigureAwait(false);
@@ -8027,6 +8584,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLaserPenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLaserPenResult> GetLaserPenAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLaserPenAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -8055,6 +8614,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdatePenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdatePenResult> UpdatePenAsync(int id, string? scannerId = default, PenDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdatePenAsync(id, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8083,6 +8644,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPixelMapForPenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPixelMapForPenResult> GetPixelMapForPenAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPixelMapForPenAsync(id, scannerId, cancellationToken).ConfigureAwait(false);
@@ -8111,6 +8674,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetPixelMapForPenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetPixelMapForPenResult> SetPixelMapForPenAsync(int id, string? scannerId = default, PixelMapDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetPixelMapForPenAsync(id, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8139,6 +8704,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPreviewResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPreviewResult> GetPreviewAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPreviewAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8158,6 +8725,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DisableRedPointerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DisableRedPointerResult> DisableRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDisableRedPointerAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8186,6 +8755,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EnableRedPointerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EnableRedPointerResult> EnableRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEnableRedPointerAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8214,6 +8785,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartRedPointerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartRedPointerResult> StartRedPointerAsync(string? scannerId = default, StartRedPointerDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartRedPointerAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8233,6 +8806,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StopRedPointerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StopRedPointerResult> StopRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStopRedPointerAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8252,6 +8827,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RenameMarkersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RenameMarkersResult> RenameMarkersAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRenameMarkersAsync(cancellationToken).ConfigureAwait(false);
@@ -8271,6 +8848,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ResizeEntityResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ResizeEntityResult> ResizeEntityAsync(string? name = default, double? width = default, double? height = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendResizeEntityAsync(name, width, height, cancellationToken).ConfigureAwait(false);
@@ -8290,6 +8869,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SaveJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SaveJobTemplateResult> SaveJobTemplateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSaveJobTemplateAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8318,6 +8899,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SaveJobTemplateFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SaveJobTemplateFileResult> SaveJobTemplateFileAsync(string? file = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSaveJobTemplateFileAsync(file, scannerId, cancellationToken).ConfigureAwait(false);
@@ -8337,6 +8920,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SaveSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SaveSettingsResult> SaveSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSaveSettingsAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8356,6 +8941,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SelectEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SelectEntitiesResult> SelectEntitiesAsync(string? scannerId = default, SelectEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSelectEntitiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8384,6 +8971,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSamLightOptionsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSamLightOptionsResult> GetSamLightOptionsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSamLightOptionsAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8412,6 +9001,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DownloadSettingsFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DownloadSettingsFileResult> DownloadSettingsFileAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDownloadSettingsFileAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8431,6 +9022,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UploadSettingsFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UploadSettingsFileResult> UploadSettingsFileAsync(string? scannerId = default, UploadSettingsFileRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUploadSettingsFileAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8450,6 +9043,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetHomographySettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetHomographySettingsResult> GetHomographySettingsAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetHomographySettingsAsync(cameraId, scannerId, cancellationToken).ConfigureAwait(false);
@@ -8478,6 +9073,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SaveHomographySettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SaveHomographySettingsResult> SaveHomographySettingsAsync(string? cameraId = default, string? scannerId = default, HomographySettingsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSaveHomographySettingsAsync(cameraId, scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8506,6 +9103,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetHeadOpticSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetHeadOpticSettingsResult> GetHeadOpticSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetHeadOpticSettingsAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8534,6 +9133,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateSamLightOptionsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateSamLightOptionsResult> UpdateSamLightOptionsAsync(string? scannerId = default, SamLightOptionsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateSamLightOptionsAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8553,6 +9154,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetGainResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetGainResult> SetGainAsync(string? scannerId = default, Vector2d? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetGainAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8572,6 +9175,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetHeadOffsetsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetHeadOffsetsResult> GetHeadOffsetsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetHeadOffsetsAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8600,6 +9205,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetOffsetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetOffsetResult> SetOffsetAsync(string? scannerId = default, Vector2d? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetOffsetAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8628,6 +9235,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetHeadOffsetsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetHeadOffsetsResult> SetHeadOffsetsAsync(string? scannerId = default, SamLightHeadOffsetsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetHeadOffsetsAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8647,6 +9256,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShowApplicationWindowResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShowApplicationWindowResult> ShowApplicationWindowAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShowApplicationWindowAsync(cancellationToken).ConfigureAwait(false);
@@ -8666,6 +9277,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ListSjfFilesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ListSjfFilesResult> ListSjfFilesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendListSjfFilesAsync(cancellationToken).ConfigureAwait(false);
@@ -8694,6 +9307,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StopMarkingResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StopMarkingResult> StopMarkingAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStopMarkingAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8722,6 +9337,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSystemPixelMapResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSystemPixelMapResult> GetSystemPixelMapAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSystemPixelMapAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -8750,6 +9367,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateSystemPixelMapResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateSystemPixelMapResult> UpdateSystemPixelMapAsync(string? scannerId = default, PixelMapDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateSystemPixelMapAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8778,6 +9397,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SystemShutdownResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SystemShutdownResult> SystemShutdownAsync(bool? confirm = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSystemShutdownAsync(confirm, cancellationToken).ConfigureAwait(false);
@@ -8797,6 +9418,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AlignEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AlignEntitiesResult> AlignEntitiesAsync(string? scannerId = default, AlignEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAlignEntitiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8825,6 +9448,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CenterEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CenterEntitiesResult> CenterEntitiesAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCenterEntitiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8853,6 +9478,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CenterEntitiesHorizontalResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CenterEntitiesHorizontalResult> CenterEntitiesHorizontalAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCenterEntitiesHorizontalAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8881,6 +9508,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CenterEntitiesVerticalResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CenterEntitiesVerticalResult> CenterEntitiesVerticalAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCenterEntitiesVerticalAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8909,6 +9538,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MirrorXResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MirrorXResult> MirrorXAsync(string? entity = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMirrorXAsync(entity, cancellationToken).ConfigureAwait(false);
@@ -8928,6 +9559,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MirrorYResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MirrorYResult> MirrorYAsync(string? entity = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMirrorYAsync(entity, cancellationToken).ConfigureAwait(false);
@@ -8947,6 +9580,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MoveToResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MoveToResult> MoveToAsync(string? scannerId = default, MoveToDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMoveToAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8975,6 +9610,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RotateEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RotateEntitiesResult> RotateEntitiesAsync(string? scannerId = default, RotateEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRotateEntitiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -8994,6 +9631,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ScaleResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ScaleResult> ScaleAsync(string? entity = default, double? scaleX = default, double? scaleY = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendScaleAsync(entity, scaleX, scaleY, cancellationToken).ConfigureAwait(false);
@@ -9013,6 +9652,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.TranslateEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.TranslateEntitiesResult> TranslateEntitiesAsync(string? scannerId = default, TranslateEntitiesDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendTranslateEntitiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -9041,6 +9682,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetParameterResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetParameterResult> SetParameterAsync(int? offset = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetParameterAsync(offset, cancellationToken).ConfigureAwait(false);
@@ -9069,9 +9712,10 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Updates entity text/image data
-            /// </summary>
+            /// <summary>Updates entity text/image data</summary>
+            /// <param name="scannerId"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateEntitiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateEntitiesResult> UpdateEntitiesAsync(string? scannerId = default, UpdateEntitiesRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateEntitiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -9100,6 +9744,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetUndistortedImageResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetUndistortedImageResult> GetUndistortedImageAsync(string? preset = default, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetUndistortedImageAsync(preset, scannerId, cameraId, cancellationToken).ConfigureAwait(false);
@@ -9141,6 +9787,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadJobDataResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadJobDataResult> LoadJobDataAsync(int jobId, int supportId, string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadJobDataAsync(jobId, supportId, scannerId, cancellationToken).ConfigureAwait(false);
@@ -9176,315 +9824,520 @@ namespace Aida.Api.Client {
 
             internal RawClient(ScannerApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetStateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetStateAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> PostAidaV1ScannerAsync(CancellationToken cancellationToken = default)
                 => _outer.SendPostAidaV1ScannerAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ApplyOffsetsFromConfigAsync(CancellationToken cancellationToken = default)
                 => _outer.SendApplyOffsetsFromConfigAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindJobTemplateLayoutAutoPosSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindJobTemplateLayoutAutoPosSettingsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RunBarcodeReaderAsync(string? scannerId = default, string? cameraId = default, BarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendRunBarcodeReaderAsync(scannerId, cameraId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateBarcodeReadSettingsAsync(BarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateBarcodeReadSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindBarcodeReadSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindBarcodeReadSettingsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateBarcodeReadSettingsAsync(CreateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateBarcodeReadSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteBarcodeReadSettingsAsync(int barcodeReadSettingsId, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteBarcodeReadSettingsAsync(barcodeReadSettingsId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindChessBoardCornersAsync(string? scannerId = default, string? cameraId = default, float? patternWidth = default, float? patternHeight = default, float? squareSize = default, float? fovHeightMm = default, float? fovWidthMm = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindChessBoardCornersAsync(scannerId, cameraId, patternWidth, patternHeight, squareSize, fovHeightMm, fovWidthMm, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSnapshotAsync(string format, string? scannerId = default, string? cameraId = default, int? width = default, int? height = default, bool? warpPerspective = default, bool? undistort = default, string? preset = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetSnapshotAsync(format, scannerId, cameraId, width, height, warpPerspective, undistort, preset, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSnapshotImageAsync(string format, string? scannerId = default, string? cameraId = default, int? width = default, int? height = default, bool? warpPerspective = default, bool? undistort = default, string? preset = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetSnapshotImageAsync(format, scannerId, cameraId, width, height, warpPerspective, undistort, preset, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetCameraInfoAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetCameraInfoAsync(cameraId, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LiveStreamAsync(string? scannerId = default, string? cameraId = default, string? preset = default, bool? warpPerspective = default, CancellationToken cancellationToken = default)
                 => _outer.SendLiveStreamAsync(scannerId, cameraId, preset, warpPerspective, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LiveStreamPageAsync(string? scannerId = default, string? cameraId = default, string? preset = default, bool? warpPerspective = default, CancellationToken cancellationToken = default)
                 => _outer.SendLiveStreamPageAsync(scannerId, cameraId, preset, warpPerspective, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindOcrSettingsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindOcrSettingsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateOcrSettingsAsync(OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateOcrSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateOcrSettingsAsync(OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateOcrSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteOcrSettingsAsync(int ocrSettingsId, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteOcrSettingsAsync(ocrSettingsId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RunOcrAsync(string? scannerId = default, string? cameraId = default, string? xOcrInspectionId = default, string? xJobId = default, string? xJobInstanceId = default, string? xWorkflowId = default, string? xTraceId = default, bool? xLogOcrOutput = default, OcrSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendRunOcrAsync(scannerId, cameraId, xOcrInspectionId, xJobId, xJobInstanceId, xWorkflowId, xTraceId, xLogOcrOutput, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSupportedOcrLanguagesAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetSupportedOcrLanguagesAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetCameraPresetsListAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetCameraPresetsListAsync(cameraId, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateCameraSettingsAsync(string? scannerId = default, string? cameraId = default, CameraSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateCameraSettingsAsync(scannerId, cameraId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateCameraSettingsAsync(string? scannerId = default, string? cameraId = default, CameraSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateCameraSettingsAsync(scannerId, cameraId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetCameraPresetByNameAsync(string presetName, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetCameraPresetByNameAsync(presetName, scannerId, cameraId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ResetCameraOutputSettingsAsync(string presetName, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
                 => _outer.SendResetCameraOutputSettingsAsync(presetName, scannerId, cameraId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetCardOrientationCheckConfigurationAsync(CardOrientationCheckConfiguration? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetCardOrientationCheckConfigurationAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ComputeMarkGroupsWithStrategyAsync(int? jobId = default, int? supportId = default, string? strategy = default, CancellationToken cancellationToken = default)
                 => _outer.SendComputeMarkGroupsWithStrategyAsync(jobId, supportId, strategy, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DownloadScannerConfigAsync(CancellationToken cancellationToken = default)
                 => _outer.SendDownloadScannerConfigAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ExportScannerConfigAsync(CancellationToken cancellationToken = default)
                 => _outer.SendExportScannerConfigAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ConnectAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendConnectAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateCalibrationJobAsync(CancellationToken cancellationToken = default)
                 => _outer.SendCreateCalibrationJobAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateChessBoardJobAsync(CancellationToken cancellationToken = default)
                 => _outer.SendCreateChessBoardJobAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateLineAsync(CreateLineDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateLineAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateRectangleAsync(DRectangleDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateRectangleAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DisableDebugModeAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDisableDebugModeAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EnableDebugModeAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendEnableDebugModeAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateEntityPropertiesAsync(string? scannerId = default, ScannerEntityDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateEntityPropertiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetEntityPenAsync(string? entityId = default, int? penId = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetEntityPenAsync(entityId, penId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ExportLayoutAsync(string? layoutName = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendExportLayoutAsync(layoutName, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetCurrentJobFilenameAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetCurrentJobFilenameAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ScannerHealthCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendScannerHealthCheckAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DisableIlluminationAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDisableIlluminationAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EnableIlluminationAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendEnableIlluminationAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> IsConnectedAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendIsConnectedAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateJobTemplateBarcodeReadSettingsAsync(JobTemplateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateJobTemplateBarcodeReadSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateJobTemplateBarcodeReadSettingsAsync(JobTemplateBarcodeReadSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateJobTemplateBarcodeReadSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteJobTemplateBarcodeReadSettingsAsync(int jobTemplateBarcodeReadSettingsId, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteJobTemplateBarcodeReadSettingsAsync(jobTemplateBarcodeReadSettingsId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdatePrintSettingsAsync(int jobTemplateInkjetLayoutId, PrintSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdatePrintSettingsAsync(jobTemplateInkjetLayoutId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateJobTemplateOcrSettingsAsync(JobTemplateOcrSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateJobTemplateOcrSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateJobTemplateOcrSettingsAsync(JobTemplateOcrSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateJobTemplateOcrSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteJobTemplateOcrSettingsAsync(int jobTemplateOcrSettingsId, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteJobTemplateOcrSettingsAsync(jobTemplateOcrSettingsId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AssignInkjetLayoutsToJobTemplateAsync(int id, global::System.Collections.Generic.IList<JobTemplateInkjetLayoutDto>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAssignInkjetLayoutsToJobTemplateAsync(id, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AssignInkjetLayoutToJobTemplateAsync(int jobTemplateId, string supportSide, int inkjetLayoutId, int? index = default, CancellationToken cancellationToken = default)
                 => _outer.SendAssignInkjetLayoutToJobTemplateAsync(jobTemplateId, supportSide, inkjetLayoutId, index, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RemoveInkjetLayoutFromJobTemplateAsync(int jobTemplateId, int inkjetLayoutId, string supportSide, CancellationToken cancellationToken = default)
                 => _outer.SendRemoveInkjetLayoutFromJobTemplateAsync(jobTemplateId, inkjetLayoutId, supportSide, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateSecurityFeaturesSettingsAsync(UpdateSecurityFeatureSettingsRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateSecurityFeaturesSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateMirroringSettingsAsync(UpdateMirroringSettingsRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateMirroringSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateInkjetLayoutPrintSettingsAsync(UpdateJobTemplatePrintParametersRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateInkjetLayoutPrintSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindJobsAsync(int id, string? scannerId = default, int? page = default, int? pageSize = default, JobStatus? status = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindJobsAsync(id, scannerId, page, pageSize, status, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AssignLayoutsToJobTemplateAsync(int id, global::System.Collections.Generic.IList<JobTemplateLayoutDto>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAssignLayoutsToJobTemplateAsync(id, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UploadLayoutAndAddToJobTemplateAsync(int id, string? scannerId = default, string? layoutName = default, string? supportSide = default, UploadLayoutAndAddToJobTemplateRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUploadLayoutAndAddToJobTemplateAsync(id, scannerId, layoutName, supportSide, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AddMarkGroupAsync(int id, string? scannerId = default, MarkGroup? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAddMarkGroupAsync(id, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RebuildSjfFileAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendRebuildSjfFileAsync(id, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AssignWebHookTargetAsync(int id, WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAssignWebHookTargetAsync(id, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RemoveWebhooksTargetAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendRemoveWebhooksTargetAsync(id, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AssignLayoutToJobTemplateAsync(int jobTemplateId, string supportSide, int layoutId, int? index = default, CancellationToken cancellationToken = default)
                 => _outer.SendAssignLayoutToJobTemplateAsync(jobTemplateId, supportSide, layoutId, index, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RemoveLayoutFromJobTemplateAsync(int jobTemplateId, int layoutId, string supportSide, CancellationToken cancellationToken = default)
                 => _outer.SendRemoveLayoutFromJobTemplateAsync(jobTemplateId, layoutId, supportSide, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindJobTemplatesAsync(string? scannerId = default, bool? includeLayouts = default, bool? includeFile = default, bool? includeEntities = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindJobTemplatesAsync(scannerId, includeLayouts, includeFile, includeEntities, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateJobTemplateAsync(string? scannerId = default, CreateJobTemplateDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateJobTemplateAsync(scannerId, body, cancellationToken);
 
-            /// <summary>
-            /// Clears the current job on SCAPS
-            /// </summary>
+            /// <summary>Clears the current job on SCAPS</summary>
+            /// <param name="scannerId"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ClearAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendClearAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetJobTemplateNamesAsync(string? propertyName = default, SortDirection? direction = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetJobTemplateNamesAsync(propertyName, direction, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RenameJobTemplateAsync(RenameJobTemplateDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendRenameJobTemplateAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ValidateJobTemplateNameAsync(string? scannerId = default, string? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendValidateJobTemplateNameAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetJobTemplateByIdAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetJobTemplateByIdAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteJobTemplateAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteJobTemplateAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> InitializeAutoPosAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendInitializeAutoPosAsync(id, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AddJobTemplateChipEncodingConfigurationAsync(int id, ChipEncodingConfigurationDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAddJobTemplateChipEncodingConfigurationAsync(id, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ComputeMarkGroupsAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendComputeMarkGroupsAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAssignedLayoutsByJobTemplateIdAsync(int id, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetAssignedLayoutsByJobTemplateIdAsync(id, page, pageSize, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAssignableLayoutsByJobTemplateIdAsync(int id, int? page = default, int? pageSize = default, string? supportSide = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetAssignableLayoutsByJobTemplateIdAsync(id, page, pageSize, supportSide, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateMarkGroupsAsync(int id, string? scannerId = default, global::System.Collections.Generic.IList<ScannerMarkGroupDto>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateMarkGroupsAsync(id, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RemoveMarkGroupsAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendRemoveMarkGroupsAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MeasureEntitiesMarkTimeAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendMeasureEntitiesMarkTimeAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SimulateMarkAsync(int id, int cardId, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendSimulateMarkAsync(id, cardId, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> TestSelectionAsync(int id, int cardId, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendTestSelectionAsync(id, cardId, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AddJobTemplateInkjetLayoutAutoPosSettingsAsync(int jobTemplateId, int inkjetLayoutId, string? scannerId = default, CreateJobTemplateLayoutAutoPosSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAddJobTemplateInkjetLayoutAutoPosSettingsAsync(jobTemplateId, inkjetLayoutId, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AddJobTemplateLayoutAutoPosSettingsAsync(int jobTemplateId, int layoutId, string? scannerId = default, CreateJobTemplateLayoutAutoPosSettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAddJobTemplateLayoutAutoPosSettingsAsync(jobTemplateId, layoutId, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAutoPosSettingsAsync(int jobTemplateId, int layoutId, CancellationToken cancellationToken = default)
                 => _outer.SendGetAutoPosSettingsAsync(jobTemplateId, layoutId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetReadBackConfigurationAsync(int jobTemplateId, ReadBackConfigurationDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetReadBackConfigurationAsync(jobTemplateId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteReadBackConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteReadBackConfigurationAsync(jobTemplateId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLaserBoardStateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetLaserBoardStateAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DisableLaserPenAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDisableLaserPenAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EnableLaserPenAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendEnableLaserPenAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindLayoutsAsync(string? scannerId = default, bool? includeFile = default, bool? includeEntities = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindLayoutsAsync(scannerId, includeFile, includeEntities, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ImportLayoutFileAsync(string? scannerId = default, string? layoutName = default, string? filename = default, CancellationToken cancellationToken = default)
                 => _outer.SendImportLayoutFileAsync(scannerId, layoutName, filename, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ImportLayoutFileValidationAsync(string? layoutName = default, string? filename = default, CancellationToken cancellationToken = default)
                 => _outer.SendImportLayoutFileValidationAsync(layoutName, filename, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLayoutStoreSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetLayoutStoreSettingsAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UploadLayoutFileAsync(UploadLayoutFileRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUploadLayoutFileAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ValidateLayoutNameAsync(string? scannerId = default, string? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendValidateLayoutNameAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLayoutByIdAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetLayoutByIdAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RenameLayoutAsync(int id, string? name = default, CancellationToken cancellationToken = default)
                 => _outer.SendRenameLayoutAsync(id, name, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteLayoutAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteLayoutAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadJobTemplateAsync(int? id = default, bool? force = default, bool? useLocalCache = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadJobTemplateAsync(id, force, useLocalCache, scannerId, cancellationToken);
 
@@ -9492,180 +10345,299 @@ namespace Aida.Api.Client {
             /// Loads a job template, fetches the personalization data from the configured data source
             /// and updates entities
             /// </summary>
+            /// <param name="jobId"></param>
+            /// <param name="instanceId"></param>
+            /// <param name="scannerId"></param>
+            /// <param name="force"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadJobInstanceAsync(int? jobId = default, int? instanceId = default, string? scannerId = default, bool? force = default, bool? skipUpdate = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadJobInstanceAsync(jobId, instanceId, scannerId, force, skipUpdate, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadJobTemplateLayoutAsync(int? jobId = default, int? layoutId = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadJobTemplateLayoutAsync(jobId, layoutId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadLayoutAsync(string? supportSide = default, string? layoutName = default, bool? overwriteEntities = default, bool? loadMaterials = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadLayoutAsync(supportSide, layoutName, overwriteEntities, loadMaterials, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadSjfFileAsync(string? scannerId = default, LoadSjfFileRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadSjfFileAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MarkEntitiesAsync(bool? waitForCompletion = default, string? scannerId = default, MarkEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendMarkEntitiesAsync(waitForCompletion, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MarkLayoutAsync(string? name = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendMarkLayoutAsync(name, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MarkRectangleAtAsync(DRectangleDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendMarkRectangleAtAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MoveAbsAsync(double? x = default, double? y = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendMoveAbsAsync(x, y, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetCurrentPenSetAsync(string? scannerId = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetCurrentPenSetAsync(scannerId, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ExportPenSetAsync(CancellationToken cancellationToken = default)
                 => _outer.SendExportPenSetAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ImportPenSetAsync(string? scannerId = default, ImportPenSetRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendImportPenSetAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SavePenSetAsync(string? scannerId = default, bool? syncMetadata = default, CancellationToken cancellationToken = default)
                 => _outer.SendSavePenSetAsync(scannerId, syncMetadata, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLaserPenAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetLaserPenAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdatePenAsync(int id, string? scannerId = default, PenDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdatePenAsync(id, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPixelMapForPenAsync(int id, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetPixelMapForPenAsync(id, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetPixelMapForPenAsync(int id, string? scannerId = default, PixelMapDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetPixelMapForPenAsync(id, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPreviewAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetPreviewAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DisableRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDisableRedPointerAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EnableRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendEnableRedPointerAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartRedPointerAsync(string? scannerId = default, StartRedPointerDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendStartRedPointerAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StopRedPointerAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendStopRedPointerAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RenameMarkersAsync(CancellationToken cancellationToken = default)
                 => _outer.SendRenameMarkersAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ResizeEntityAsync(string? name = default, double? width = default, double? height = default, CancellationToken cancellationToken = default)
                 => _outer.SendResizeEntityAsync(name, width, height, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SaveJobTemplateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendSaveJobTemplateAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SaveJobTemplateFileAsync(string? file = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendSaveJobTemplateFileAsync(file, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SaveSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendSaveSettingsAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SelectEntitiesAsync(string? scannerId = default, SelectEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSelectEntitiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSamLightOptionsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetSamLightOptionsAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DownloadSettingsFileAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDownloadSettingsFileAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UploadSettingsFileAsync(string? scannerId = default, UploadSettingsFileRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUploadSettingsFileAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetHomographySettingsAsync(string? cameraId = default, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetHomographySettingsAsync(cameraId, scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SaveHomographySettingsAsync(string? cameraId = default, string? scannerId = default, HomographySettingsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSaveHomographySettingsAsync(cameraId, scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetHeadOpticSettingsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetHeadOpticSettingsAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateSamLightOptionsAsync(string? scannerId = default, SamLightOptionsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateSamLightOptionsAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetGainAsync(string? scannerId = default, Vector2d? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetGainAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetHeadOffsetsAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetHeadOffsetsAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetOffsetAsync(string? scannerId = default, Vector2d? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetOffsetAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetHeadOffsetsAsync(string? scannerId = default, SamLightHeadOffsetsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetHeadOffsetsAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShowApplicationWindowAsync(CancellationToken cancellationToken = default)
                 => _outer.SendShowApplicationWindowAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ListSjfFilesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendListSjfFilesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StopMarkingAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendStopMarkingAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSystemPixelMapAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetSystemPixelMapAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateSystemPixelMapAsync(string? scannerId = default, PixelMapDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateSystemPixelMapAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SystemShutdownAsync(bool? confirm = default, CancellationToken cancellationToken = default)
                 => _outer.SendSystemShutdownAsync(confirm, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AlignEntitiesAsync(string? scannerId = default, AlignEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAlignEntitiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CenterEntitiesAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCenterEntitiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CenterEntitiesHorizontalAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCenterEntitiesHorizontalAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CenterEntitiesVerticalAsync(string? scannerId = default, CenterEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCenterEntitiesVerticalAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MirrorXAsync(string? entity = default, CancellationToken cancellationToken = default)
                 => _outer.SendMirrorXAsync(entity, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MirrorYAsync(string? entity = default, CancellationToken cancellationToken = default)
                 => _outer.SendMirrorYAsync(entity, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MoveToAsync(string? scannerId = default, MoveToDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendMoveToAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RotateEntitiesAsync(string? scannerId = default, RotateEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendRotateEntitiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ScaleAsync(string? entity = default, double? scaleX = default, double? scaleY = default, CancellationToken cancellationToken = default)
                 => _outer.SendScaleAsync(entity, scaleX, scaleY, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> TranslateEntitiesAsync(string? scannerId = default, TranslateEntitiesDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendTranslateEntitiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetParameterAsync(int? offset = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetParameterAsync(offset, cancellationToken);
 
-            /// <summary>
-            /// Updates entity text/image data
-            /// </summary>
+            /// <summary>Updates entity text/image data</summary>
+            /// <param name="scannerId"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateEntitiesAsync(string? scannerId = default, UpdateEntitiesRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateEntitiesAsync(scannerId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetUndistortedImageAsync(string? preset = default, string? scannerId = default, string? cameraId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetUndistortedImageAsync(preset, scannerId, cameraId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadJobDataAsync(int jobId, int supportId, string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadJobDataAsync(jobId, supportId, scannerId, cancellationToken);
         }

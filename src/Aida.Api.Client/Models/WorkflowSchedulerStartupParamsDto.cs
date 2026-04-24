@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 namespace Aida.Api.Client {
     public partial class WorkflowSchedulerStartupParamsDto {
         [JsonPropertyName("disableRedPointer")]
+        [System.Obsolete]
         public bool? DisableRedPointer { get; set; }
 
         [JsonPropertyName("dryRun")]
@@ -32,9 +33,11 @@ namespace Aida.Api.Client {
         public int? StopAfter { get; set; }
 
         [JsonPropertyName("taskAllocationStrategy")]
+        [System.Obsolete]
         public string? TaskAllocationStrategy { get; set; }
 
         [JsonPropertyName("workflowTypeName")]
+        [System.Obsolete]
         public string? WorkflowTypeName { get; set; }
 
     }

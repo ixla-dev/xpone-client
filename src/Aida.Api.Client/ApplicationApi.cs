@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IDictionary<string, string>> GetAppConfigurationAsync(string? sectionPath = default, CancellationToken cancellationToken = default)
         {
@@ -62,9 +64,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Returns the configuration object currently used by the system
-        /// </summary>
+        /// <summary>Returns the configuration object currently used by the system</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<AppConfig> GetApplicationSettingsAsync(CancellationToken cancellationToken = default)
         {
@@ -94,6 +96,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetConfigValueAsync(string? path = default, CancellationToken cancellationToken = default)
         {
@@ -114,6 +118,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ApplicationApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAppConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAppConfigurationResult> GetAppConfigurationAsync(string? sectionPath = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAppConfigurationAsync(sectionPath, cancellationToken).ConfigureAwait(false);
@@ -142,9 +148,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Returns the configuration object currently used by the system
-            /// </summary>
+            /// <summary>Returns the configuration object currently used by the system</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetApplicationSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetApplicationSettingsResult> GetApplicationSettingsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetApplicationSettingsAsync(cancellationToken).ConfigureAwait(false);
@@ -173,6 +179,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetConfigValueResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetConfigValueResult> GetConfigValueAsync(string? path = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetConfigValueAsync(path, cancellationToken).ConfigureAwait(false);
@@ -199,15 +207,19 @@ namespace Aida.Api.Client {
 
             internal RawClient(ApplicationApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAppConfigurationAsync(string? sectionPath = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetAppConfigurationAsync(sectionPath, cancellationToken);
 
-            /// <summary>
-            /// Returns the configuration object currently used by the system
-            /// </summary>
+            /// <summary>Returns the configuration object currently used by the system</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetApplicationSettingsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetApplicationSettingsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetConfigValueAsync(string? path = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetConfigValueAsync(path, cancellationToken);
         }

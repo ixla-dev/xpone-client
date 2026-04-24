@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeleteFileAsync(int? fileId = default, CancellationToken cancellationToken = default)
         {
@@ -60,6 +62,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<FileServiceSettings> GetSettingsAsync(CancellationToken cancellationToken = default)
         {
@@ -93,6 +97,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<FileDtoSearchResultDto> ListAsync(string bucket, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
         {
@@ -134,6 +140,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<FileDto> UploadAsync(string bucket, string? name = default, UploadRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -156,6 +164,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(FilesApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteFileResult> DeleteFileAsync(int? fileId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteFileAsync(fileId, cancellationToken).ConfigureAwait(false);
@@ -175,6 +185,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSettingsResult> GetSettingsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSettingsAsync(cancellationToken).ConfigureAwait(false);
@@ -203,6 +215,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ListResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ListResult> ListAsync(string bucket, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendListAsync(bucket, page, pageSize, cancellationToken).ConfigureAwait(false);
@@ -231,6 +245,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UploadResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UploadResult> UploadAsync(string bucket, string? name = default, UploadRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUploadAsync(bucket, name, body, cancellationToken).ConfigureAwait(false);
@@ -266,15 +282,23 @@ namespace Aida.Api.Client {
 
             internal RawClient(FilesApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteFileAsync(int? fileId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteFileAsync(fileId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSettingsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetSettingsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ListAsync(string bucket, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
                 => _outer.SendListAsync(bucket, page, pageSize, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UploadAsync(string bucket, string? name = default, UploadRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUploadAsync(bucket, name, body, cancellationToken);
         }

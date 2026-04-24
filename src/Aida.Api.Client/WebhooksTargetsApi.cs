@@ -54,6 +54,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchWebhooksTargetsResultDto> FindWebhooksTargetsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -83,6 +85,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WebhooksTargetDto> UpdateWebhooksTargetAsync(WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -112,6 +116,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WebhooksTargetDto> CreateWebhooksTargetAsync(WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -136,6 +142,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WebhooksTargetDto> GetWebhooksTargetByIdAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -160,6 +168,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WebhookTargetTestResultDto> TestWebhookTargetAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -184,6 +194,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WebhooksTargetDto> DeleteWebhooksTargetAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -206,6 +218,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(WebhooksTargetsApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindWebhooksTargetsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindWebhooksTargetsResult> FindWebhooksTargetsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindWebhooksTargetsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -234,6 +248,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateWebhooksTargetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateWebhooksTargetResult> UpdateWebhooksTargetAsync(WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateWebhooksTargetAsync(body, cancellationToken).ConfigureAwait(false);
@@ -262,6 +278,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateWebhooksTargetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateWebhooksTargetResult> CreateWebhooksTargetAsync(WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateWebhooksTargetAsync(body, cancellationToken).ConfigureAwait(false);
@@ -290,6 +308,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWebhooksTargetByIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWebhooksTargetByIdResult> GetWebhooksTargetByIdAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWebhooksTargetByIdAsync(id, cancellationToken).ConfigureAwait(false);
@@ -318,6 +338,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.TestWebhookTargetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.TestWebhookTargetResult> TestWebhookTargetAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendTestWebhookTargetAsync(id, cancellationToken).ConfigureAwait(false);
@@ -346,6 +368,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteWebhooksTargetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteWebhooksTargetResult> DeleteWebhooksTargetAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteWebhooksTargetAsync(id, cancellationToken).ConfigureAwait(false);
@@ -381,21 +405,33 @@ namespace Aida.Api.Client {
 
             internal RawClient(WebhooksTargetsApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindWebhooksTargetsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindWebhooksTargetsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateWebhooksTargetAsync(WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateWebhooksTargetAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateWebhooksTargetAsync(WebhooksTargetDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateWebhooksTargetAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWebhooksTargetByIdAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendGetWebhooksTargetByIdAsync(id, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> TestWebhookTargetAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendTestWebhookTargetAsync(id, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteWebhooksTargetAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteWebhooksTargetAsync(id, cancellationToken);
         }

@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetModbusClientsAsync(CancellationToken cancellationToken = default)
         {
@@ -76,6 +78,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DeviceRegistersValues> ExportRegistersAsync(string? com = default, int? slaveId = default, global::System.Collections.Generic.IList<int>? includedRegisters = default, int? startRegister = default, int? endRegister = default, CancellationToken cancellationToken = default)
         {
@@ -105,6 +109,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ImportRegistersAsync(ImportRegistersRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -132,6 +138,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<float> ReadFloat32RegistersAsync(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -161,6 +169,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ReadHoldingRegistersAsync(string port, ReadHoldingRegistersRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -188,6 +198,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<int> ReadInt16Async(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -217,6 +229,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<int> ReadInt32Async(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -246,6 +260,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task WriteFloat32Async(string port, WriteFloat32Request? body = default, CancellationToken cancellationToken = default)
         {
@@ -273,6 +289,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task WriteInt16Async(string port, WriteInt16Request? body = default, CancellationToken cancellationToken = default)
         {
@@ -300,6 +318,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task WriteInt32Async(string port, WriteInt32Request? body = default, CancellationToken cancellationToken = default)
         {
@@ -327,6 +347,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task WriteStringAsync(string port, WriteMultipleRegistersRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -354,6 +376,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task WriteSingleRegisterAsync(string port, WriteUInt16Request? body = default, CancellationToken cancellationToken = default)
         {
@@ -376,6 +400,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<int>> ReadAllRegistersAsync(string slaveIdHex, string port, CancellationToken cancellationToken = default)
         {
@@ -398,6 +424,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ModbusApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetModbusClientsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetModbusClientsResult> GetModbusClientsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetModbusClientsAsync(cancellationToken).ConfigureAwait(false);
@@ -417,6 +445,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ExportRegistersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ExportRegistersResult> ExportRegistersAsync(string? com = default, int? slaveId = default, global::System.Collections.Generic.IList<int>? includedRegisters = default, int? startRegister = default, int? endRegister = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendExportRegistersAsync(com, slaveId, includedRegisters, startRegister, endRegister, cancellationToken).ConfigureAwait(false);
@@ -445,6 +475,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ImportRegistersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ImportRegistersResult> ImportRegistersAsync(ImportRegistersRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendImportRegistersAsync(body, cancellationToken).ConfigureAwait(false);
@@ -464,6 +496,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReadFloat32RegistersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReadFloat32RegistersResult> ReadFloat32RegistersAsync(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReadFloat32RegistersAsync(port, body, cancellationToken).ConfigureAwait(false);
@@ -492,6 +526,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReadHoldingRegistersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReadHoldingRegistersResult> ReadHoldingRegistersAsync(string port, ReadHoldingRegistersRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReadHoldingRegistersAsync(port, body, cancellationToken).ConfigureAwait(false);
@@ -511,6 +547,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReadInt16Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReadInt16Result> ReadInt16Async(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReadInt16Async(port, body, cancellationToken).ConfigureAwait(false);
@@ -539,6 +577,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReadInt32Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReadInt32Result> ReadInt32Async(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReadInt32Async(port, body, cancellationToken).ConfigureAwait(false);
@@ -567,6 +607,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.WriteFloat32Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.WriteFloat32Result> WriteFloat32Async(string port, WriteFloat32Request? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendWriteFloat32Async(port, body, cancellationToken).ConfigureAwait(false);
@@ -586,6 +628,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.WriteInt16Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.WriteInt16Result> WriteInt16Async(string port, WriteInt16Request? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendWriteInt16Async(port, body, cancellationToken).ConfigureAwait(false);
@@ -605,6 +649,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.WriteInt32Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.WriteInt32Result> WriteInt32Async(string port, WriteInt32Request? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendWriteInt32Async(port, body, cancellationToken).ConfigureAwait(false);
@@ -624,6 +670,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.WriteStringResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.WriteStringResult> WriteStringAsync(string port, WriteMultipleRegistersRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendWriteStringAsync(port, body, cancellationToken).ConfigureAwait(false);
@@ -643,6 +691,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.WriteSingleRegisterResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.WriteSingleRegisterResult> WriteSingleRegisterAsync(string port, WriteUInt16Request? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendWriteSingleRegisterAsync(port, body, cancellationToken).ConfigureAwait(false);
@@ -662,6 +712,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReadAllRegistersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReadAllRegistersResult> ReadAllRegistersAsync(string slaveIdHex, string port, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReadAllRegistersAsync(slaveIdHex, port, cancellationToken).ConfigureAwait(false);
@@ -697,42 +749,68 @@ namespace Aida.Api.Client {
 
             internal RawClient(ModbusApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetModbusClientsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetModbusClientsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ExportRegistersAsync(string? com = default, int? slaveId = default, global::System.Collections.Generic.IList<int>? includedRegisters = default, int? startRegister = default, int? endRegister = default, CancellationToken cancellationToken = default)
                 => _outer.SendExportRegistersAsync(com, slaveId, includedRegisters, startRegister, endRegister, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ImportRegistersAsync(ImportRegistersRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendImportRegistersAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReadFloat32RegistersAsync(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendReadFloat32RegistersAsync(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReadHoldingRegistersAsync(string port, ReadHoldingRegistersRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendReadHoldingRegistersAsync(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReadInt16Async(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendReadInt16Async(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReadInt32Async(string port, ReadFieldRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendReadInt32Async(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> WriteFloat32Async(string port, WriteFloat32Request? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendWriteFloat32Async(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> WriteInt16Async(string port, WriteInt16Request? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendWriteInt16Async(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> WriteInt32Async(string port, WriteInt32Request? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendWriteInt32Async(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> WriteStringAsync(string port, WriteMultipleRegistersRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendWriteStringAsync(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> WriteSingleRegisterAsync(string port, WriteUInt16Request? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendWriteSingleRegisterAsync(port, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReadAllRegistersAsync(string slaveIdHex, string port, CancellationToken cancellationToken = default)
                 => _outer.SendReadAllRegistersAsync(slaveIdHex, port, cancellationToken);
         }

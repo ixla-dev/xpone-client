@@ -54,6 +54,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchDataSourceConfigurationResultDto> FindDataSourceConfigurationsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -83,6 +85,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DataSourceConfigurationDto> AddDataSourceConfigurationAsync(CreateDataSourceDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -112,6 +116,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<MySqlDataSourceConfigurationDto> UpdateMysqlDataSourceConfigurationAsync(MySqlDataSourceConfigurationDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -141,6 +147,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<NpgSqlDataSourceConfigurationDto> UpdateNpgSqlDataSourceConfigurationAsync(NpgSqlDataSourceConfigurationDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -165,6 +173,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeleteDataSourceConfigurationAsync(int id, CancellationToken cancellationToken = default)
         {
@@ -185,6 +195,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(DataSourceConfigurationApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindDataSourceConfigurationsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindDataSourceConfigurationsResult> FindDataSourceConfigurationsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindDataSourceConfigurationsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -213,6 +225,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AddDataSourceConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AddDataSourceConfigurationResult> AddDataSourceConfigurationAsync(CreateDataSourceDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAddDataSourceConfigurationAsync(body, cancellationToken).ConfigureAwait(false);
@@ -241,6 +255,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateMysqlDataSourceConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateMysqlDataSourceConfigurationResult> UpdateMysqlDataSourceConfigurationAsync(MySqlDataSourceConfigurationDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateMysqlDataSourceConfigurationAsync(body, cancellationToken).ConfigureAwait(false);
@@ -269,6 +285,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateNpgSqlDataSourceConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateNpgSqlDataSourceConfigurationResult> UpdateNpgSqlDataSourceConfigurationAsync(NpgSqlDataSourceConfigurationDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateNpgSqlDataSourceConfigurationAsync(body, cancellationToken).ConfigureAwait(false);
@@ -297,6 +315,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteDataSourceConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteDataSourceConfigurationResult> DeleteDataSourceConfigurationAsync(int id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteDataSourceConfigurationAsync(id, cancellationToken).ConfigureAwait(false);
@@ -323,18 +343,28 @@ namespace Aida.Api.Client {
 
             internal RawClient(DataSourceConfigurationApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindDataSourceConfigurationsAsync(int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindDataSourceConfigurationsAsync(page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AddDataSourceConfigurationAsync(CreateDataSourceDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAddDataSourceConfigurationAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateMysqlDataSourceConfigurationAsync(MySqlDataSourceConfigurationDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateMysqlDataSourceConfigurationAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateNpgSqlDataSourceConfigurationAsync(NpgSqlDataSourceConfigurationDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateNpgSqlDataSourceConfigurationAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteDataSourceConfigurationAsync(int id, CancellationToken cancellationToken = default)
                 => _outer.SendDeleteDataSourceConfigurationAsync(id, cancellationToken);
         }

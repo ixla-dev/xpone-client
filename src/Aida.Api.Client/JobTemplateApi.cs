@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetJobTemplateAsync(int id, string? apiVersion = default, CancellationToken cancellationToken = default)
         {
@@ -58,6 +60,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(JobTemplateApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetJobTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetJobTemplateResult> GetJobTemplateAsync(int id, string? apiVersion = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetJobTemplateAsync(id, apiVersion, cancellationToken).ConfigureAwait(false);
@@ -84,6 +88,8 @@ namespace Aida.Api.Client {
 
             internal RawClient(JobTemplateApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetJobTemplateAsync(int id, string? apiVersion = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetJobTemplateAsync(id, apiVersion, cancellationToken);
         }

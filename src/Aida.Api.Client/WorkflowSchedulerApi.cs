@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<JobInstanceDto>> GetRunningJobInstancesAsync(CancellationToken cancellationToken = default)
         {
@@ -57,6 +59,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<JobInstanceDto>> GetSuspendedJobInstancesAsync(CancellationToken cancellationToken = default)
         {
@@ -94,6 +98,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetJobDataAvailableAsync(string? workflowInstanceId = default, string? jobId = default, string? correlationId = default, CancellationToken cancellationToken = default)
         {
@@ -121,6 +127,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<Job>> GetJobStatusAsync(global::System.Collections.Generic.IList<int>? body = default, CancellationToken cancellationToken = default)
         {
@@ -145,6 +153,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<RuntimeMetrics> GetMetricsAsync(CancellationToken cancellationToken = default)
         {
@@ -182,6 +192,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<object>> ListNamedLocksAsync(string? ownerId = default, string? resource = default, bool? locked = default, CancellationToken cancellationToken = default)
         {
@@ -215,6 +227,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ReleaseNamedLockAsync(int? ownerId = default, string? name = default, CancellationToken cancellationToken = default)
         {
@@ -237,6 +251,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<object>> GetNamedLockAsync(string resourceName, CancellationToken cancellationToken = default)
         {
@@ -266,6 +282,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ClearPrintQueueAsync(string? jobTemplateName = default, CancellationToken cancellationToken = default)
         {
@@ -288,6 +306,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<int>> GetQueuedJobsAsync(CancellationToken cancellationToken = default)
         {
@@ -312,6 +332,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<JobInstance>> ResumeWorkflowSchedulerAsync(CancellationToken cancellationToken = default)
         {
@@ -336,6 +358,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<ResumeItem>> GetResumeItemsAsync(CancellationToken cancellationToken = default)
         {
@@ -365,6 +389,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<JobInstanceDto>> GetWorkflowsBySessionAsync(JobStatus? status = default, CancellationToken cancellationToken = default)
         {
@@ -394,6 +420,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkflowSchedulerStateDto> StartWorkflowSchedulerAsync(WorkflowSchedulerStartupParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -418,6 +446,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkflowSchedulerStateDto> GetWorkflowSchedulerStateAsync(CancellationToken cancellationToken = default)
         {
@@ -442,6 +472,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<int> GetPendingWorkflowsCountAsync(CancellationToken cancellationToken = default)
         {
@@ -466,6 +498,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<int> GetRunningWorkflowsCountAsync(CancellationToken cancellationToken = default)
         {
@@ -499,6 +533,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkflowSchedulerStateDto> StopWorkflowSchedulerAsync(bool? stopAllRunningWorkflows = default, JobErrorCodes? errorCode = default, CancellationToken cancellationToken = default)
         {
@@ -523,6 +559,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateInvalidDatabaseEntriesAsync(CancellationToken cancellationToken = default)
         {
@@ -545,6 +583,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkersQueueStateDto> GetWorkersQueueStateAsync(CancellationToken cancellationToken = default)
         {
@@ -569,6 +609,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<WorkflowBlueprintSummaryModel>> GetWorkflowBlueprintsAsync(CancellationToken cancellationToken = default)
         {
@@ -606,6 +648,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkflowInstanceDtoPagedList> GetWorkflowInstancesAsync(global::System.Collections.Generic.IList<WorkflowStatus>? status = default, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
         {
@@ -630,6 +674,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<WorkflowInstanceSummaryModel>> DeleteWorkflowInstancesAsync(CancellationToken cancellationToken = default)
         {
@@ -654,6 +700,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<string>> GetRunningWorkflowIdsAsync(CancellationToken cancellationToken = default)
         {
@@ -678,6 +726,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CancelRunningWorkflowInstancesAsync(CancellationToken cancellationToken = default)
         {
@@ -700,6 +750,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<WorkflowInstanceSummaryModel>> GetSuspendedWorkflowsAsync(CancellationToken cancellationToken = default)
         {
@@ -724,6 +776,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<WorkflowInstanceSummaryModel>> CancelSuspendedWorkflowsAsync(CancellationToken cancellationToken = default)
         {
@@ -748,6 +802,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkflowBlueprintSummaryModel> CancelWorkflowInstanceAsync(string id, CancellationToken cancellationToken = default)
         {
@@ -772,6 +828,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetPendingWorkflowMessagesAsync(CancellationToken cancellationToken = default)
         {
@@ -794,6 +852,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<WorkflowBlueprintSummaryModelPagedList> GetWorkflowRegistryAsync(CancellationToken cancellationToken = default)
         {
@@ -823,6 +883,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<QueueItem>> CancelJobsByCorrelationIdAsync(CancelJobByCorrelationIdRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -847,6 +909,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<WorkflowInstanceSummaryModel>> GetRunningWorkflowsAsync(CancellationToken cancellationToken = default)
         {
@@ -881,9 +945,11 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Notifies a suspended workflow instance when that the external process has completed execution
-        /// </summary>
+        /// <summary>Notifies a suspended workflow instance when that the external process has completed execution</summary>
+        /// <param name="waitForCompletion">If true, the server will respond once the workflow enters the completed/faulted state</param>
+        /// <param name="body">The External process completed message payload</param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<JobInstanceDto>> SignalExternalProcessCompletedAsync(bool? waitForCompletion = default, ExternalProcessCompletedMessage? body = default, CancellationToken cancellationToken = default)
         {
@@ -908,6 +974,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetWorkflowContextByWorkflowInstanceIdAsync(string workflowInstanceId, CancellationToken cancellationToken = default)
         {
@@ -928,6 +996,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(WorkflowSchedulerApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetRunningJobInstancesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetRunningJobInstancesResult> GetRunningJobInstancesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetRunningJobInstancesAsync(cancellationToken).ConfigureAwait(false);
@@ -956,6 +1026,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSuspendedJobInstancesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSuspendedJobInstancesResult> GetSuspendedJobInstancesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSuspendedJobInstancesAsync(cancellationToken).ConfigureAwait(false);
@@ -984,6 +1056,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetJobDataAvailableResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetJobDataAvailableResult> SetJobDataAvailableAsync(string? workflowInstanceId = default, string? jobId = default, string? correlationId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetJobDataAvailableAsync(workflowInstanceId, jobId, correlationId, cancellationToken).ConfigureAwait(false);
@@ -1003,6 +1077,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetJobStatusResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetJobStatusResult> GetJobStatusAsync(global::System.Collections.Generic.IList<int>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetJobStatusAsync(body, cancellationToken).ConfigureAwait(false);
@@ -1031,6 +1107,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetMetricsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetMetricsResult> GetMetricsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetMetricsAsync(cancellationToken).ConfigureAwait(false);
@@ -1059,6 +1137,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ListNamedLocksResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ListNamedLocksResult> ListNamedLocksAsync(string? ownerId = default, string? resource = default, bool? locked = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendListNamedLocksAsync(ownerId, resource, locked, cancellationToken).ConfigureAwait(false);
@@ -1087,6 +1167,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReleaseNamedLockResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReleaseNamedLockResult> ReleaseNamedLockAsync(int? ownerId = default, string? name = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReleaseNamedLockAsync(ownerId, name, cancellationToken).ConfigureAwait(false);
@@ -1106,6 +1188,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetNamedLockResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetNamedLockResult> GetNamedLockAsync(string resourceName, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetNamedLockAsync(resourceName, cancellationToken).ConfigureAwait(false);
@@ -1134,6 +1218,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ClearPrintQueueResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ClearPrintQueueResult> ClearPrintQueueAsync(string? jobTemplateName = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendClearPrintQueueAsync(jobTemplateName, cancellationToken).ConfigureAwait(false);
@@ -1153,6 +1239,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetQueuedJobsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetQueuedJobsResult> GetQueuedJobsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetQueuedJobsAsync(cancellationToken).ConfigureAwait(false);
@@ -1181,6 +1269,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ResumeWorkflowSchedulerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ResumeWorkflowSchedulerResult> ResumeWorkflowSchedulerAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendResumeWorkflowSchedulerAsync(cancellationToken).ConfigureAwait(false);
@@ -1209,6 +1299,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetResumeItemsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetResumeItemsResult> GetResumeItemsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetResumeItemsAsync(cancellationToken).ConfigureAwait(false);
@@ -1237,6 +1329,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowsBySessionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowsBySessionResult> GetWorkflowsBySessionAsync(JobStatus? status = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowsBySessionAsync(status, cancellationToken).ConfigureAwait(false);
@@ -1265,6 +1359,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartWorkflowSchedulerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartWorkflowSchedulerResult> StartWorkflowSchedulerAsync(WorkflowSchedulerStartupParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartWorkflowSchedulerAsync(body, cancellationToken).ConfigureAwait(false);
@@ -1293,6 +1389,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowSchedulerStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowSchedulerStateResult> GetWorkflowSchedulerStateAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowSchedulerStateAsync(cancellationToken).ConfigureAwait(false);
@@ -1321,6 +1419,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPendingWorkflowsCountResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPendingWorkflowsCountResult> GetPendingWorkflowsCountAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPendingWorkflowsCountAsync(cancellationToken).ConfigureAwait(false);
@@ -1349,6 +1449,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetRunningWorkflowsCountResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetRunningWorkflowsCountResult> GetRunningWorkflowsCountAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetRunningWorkflowsCountAsync(cancellationToken).ConfigureAwait(false);
@@ -1377,6 +1479,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StopWorkflowSchedulerResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StopWorkflowSchedulerResult> StopWorkflowSchedulerAsync(bool? stopAllRunningWorkflows = default, JobErrorCodes? errorCode = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStopWorkflowSchedulerAsync(stopAllRunningWorkflows, errorCode, cancellationToken).ConfigureAwait(false);
@@ -1405,6 +1509,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateInvalidDatabaseEntriesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateInvalidDatabaseEntriesResult> UpdateInvalidDatabaseEntriesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateInvalidDatabaseEntriesAsync(cancellationToken).ConfigureAwait(false);
@@ -1424,6 +1530,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkersQueueStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkersQueueStateResult> GetWorkersQueueStateAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkersQueueStateAsync(cancellationToken).ConfigureAwait(false);
@@ -1452,6 +1560,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowBlueprintsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowBlueprintsResult> GetWorkflowBlueprintsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowBlueprintsAsync(cancellationToken).ConfigureAwait(false);
@@ -1480,6 +1590,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowInstancesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowInstancesResult> GetWorkflowInstancesAsync(global::System.Collections.Generic.IList<WorkflowStatus>? status = default, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowInstancesAsync(status, page, pageSize, cancellationToken).ConfigureAwait(false);
@@ -1508,6 +1620,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteWorkflowInstancesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteWorkflowInstancesResult> DeleteWorkflowInstancesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteWorkflowInstancesAsync(cancellationToken).ConfigureAwait(false);
@@ -1536,6 +1650,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetRunningWorkflowIdsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetRunningWorkflowIdsResult> GetRunningWorkflowIdsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetRunningWorkflowIdsAsync(cancellationToken).ConfigureAwait(false);
@@ -1564,6 +1680,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CancelRunningWorkflowInstancesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CancelRunningWorkflowInstancesResult> CancelRunningWorkflowInstancesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCancelRunningWorkflowInstancesAsync(cancellationToken).ConfigureAwait(false);
@@ -1583,6 +1701,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSuspendedWorkflowsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSuspendedWorkflowsResult> GetSuspendedWorkflowsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSuspendedWorkflowsAsync(cancellationToken).ConfigureAwait(false);
@@ -1611,6 +1731,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CancelSuspendedWorkflowsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CancelSuspendedWorkflowsResult> CancelSuspendedWorkflowsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCancelSuspendedWorkflowsAsync(cancellationToken).ConfigureAwait(false);
@@ -1639,6 +1761,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CancelWorkflowInstanceResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CancelWorkflowInstanceResult> CancelWorkflowInstanceAsync(string id, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCancelWorkflowInstanceAsync(id, cancellationToken).ConfigureAwait(false);
@@ -1667,6 +1791,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPendingWorkflowMessagesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPendingWorkflowMessagesResult> GetPendingWorkflowMessagesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPendingWorkflowMessagesAsync(cancellationToken).ConfigureAwait(false);
@@ -1686,6 +1812,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowRegistryResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowRegistryResult> GetWorkflowRegistryAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowRegistryAsync(cancellationToken).ConfigureAwait(false);
@@ -1714,6 +1842,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CancelJobsByCorrelationIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CancelJobsByCorrelationIdResult> CancelJobsByCorrelationIdAsync(CancelJobByCorrelationIdRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCancelJobsByCorrelationIdAsync(body, cancellationToken).ConfigureAwait(false);
@@ -1742,6 +1872,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetRunningWorkflowsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetRunningWorkflowsResult> GetRunningWorkflowsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetRunningWorkflowsAsync(cancellationToken).ConfigureAwait(false);
@@ -1770,9 +1902,11 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Notifies a suspended workflow instance when that the external process has completed execution
-            /// </summary>
+            /// <summary>Notifies a suspended workflow instance when that the external process has completed execution</summary>
+            /// <param name="waitForCompletion">If true, the server will respond once the workflow enters the completed/faulted state</param>
+            /// <param name="body">The External process completed message payload</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SignalExternalProcessCompletedResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SignalExternalProcessCompletedResult> SignalExternalProcessCompletedAsync(bool? waitForCompletion = default, ExternalProcessCompletedMessage? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSignalExternalProcessCompletedAsync(waitForCompletion, body, cancellationToken).ConfigureAwait(false);
@@ -1801,6 +1935,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowContextByWorkflowInstanceIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowContextByWorkflowInstanceIdResult> GetWorkflowContextByWorkflowInstanceIdAsync(string workflowInstanceId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowContextByWorkflowInstanceIdAsync(workflowInstanceId, cancellationToken).ConfigureAwait(false);
@@ -1827,108 +1963,176 @@ namespace Aida.Api.Client {
 
             internal RawClient(WorkflowSchedulerApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetRunningJobInstancesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetRunningJobInstancesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSuspendedJobInstancesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetSuspendedJobInstancesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetJobDataAvailableAsync(string? workflowInstanceId = default, string? jobId = default, string? correlationId = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetJobDataAvailableAsync(workflowInstanceId, jobId, correlationId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetJobStatusAsync(global::System.Collections.Generic.IList<int>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetJobStatusAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetMetricsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetMetricsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ListNamedLocksAsync(string? ownerId = default, string? resource = default, bool? locked = default, CancellationToken cancellationToken = default)
                 => _outer.SendListNamedLocksAsync(ownerId, resource, locked, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReleaseNamedLockAsync(int? ownerId = default, string? name = default, CancellationToken cancellationToken = default)
                 => _outer.SendReleaseNamedLockAsync(ownerId, name, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetNamedLockAsync(string resourceName, CancellationToken cancellationToken = default)
                 => _outer.SendGetNamedLockAsync(resourceName, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ClearPrintQueueAsync(string? jobTemplateName = default, CancellationToken cancellationToken = default)
                 => _outer.SendClearPrintQueueAsync(jobTemplateName, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetQueuedJobsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetQueuedJobsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ResumeWorkflowSchedulerAsync(CancellationToken cancellationToken = default)
                 => _outer.SendResumeWorkflowSchedulerAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetResumeItemsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetResumeItemsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowsBySessionAsync(JobStatus? status = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowsBySessionAsync(status, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartWorkflowSchedulerAsync(WorkflowSchedulerStartupParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendStartWorkflowSchedulerAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowSchedulerStateAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowSchedulerStateAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPendingWorkflowsCountAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPendingWorkflowsCountAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetRunningWorkflowsCountAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetRunningWorkflowsCountAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StopWorkflowSchedulerAsync(bool? stopAllRunningWorkflows = default, JobErrorCodes? errorCode = default, CancellationToken cancellationToken = default)
                 => _outer.SendStopWorkflowSchedulerAsync(stopAllRunningWorkflows, errorCode, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateInvalidDatabaseEntriesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendUpdateInvalidDatabaseEntriesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkersQueueStateAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkersQueueStateAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowBlueprintsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowBlueprintsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowInstancesAsync(global::System.Collections.Generic.IList<WorkflowStatus>? status = default, int? page = default, int? pageSize = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowInstancesAsync(status, page, pageSize, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteWorkflowInstancesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendDeleteWorkflowInstancesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetRunningWorkflowIdsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetRunningWorkflowIdsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CancelRunningWorkflowInstancesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendCancelRunningWorkflowInstancesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSuspendedWorkflowsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetSuspendedWorkflowsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CancelSuspendedWorkflowsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendCancelSuspendedWorkflowsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CancelWorkflowInstanceAsync(string id, CancellationToken cancellationToken = default)
                 => _outer.SendCancelWorkflowInstanceAsync(id, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPendingWorkflowMessagesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPendingWorkflowMessagesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowRegistryAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowRegistryAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CancelJobsByCorrelationIdAsync(CancelJobByCorrelationIdRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCancelJobsByCorrelationIdAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetRunningWorkflowsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetRunningWorkflowsAsync(cancellationToken);
 
-            /// <summary>
-            /// Notifies a suspended workflow instance when that the external process has completed execution
-            /// </summary>
+            /// <summary>Notifies a suspended workflow instance when that the external process has completed execution</summary>
+            /// <param name="waitForCompletion">If true, the server will respond once the workflow enters the completed/faulted state</param>
+            /// <param name="body">The External process completed message payload</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SignalExternalProcessCompletedAsync(bool? waitForCompletion = default, ExternalProcessCompletedMessage? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSignalExternalProcessCompletedAsync(waitForCompletion, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowContextByWorkflowInstanceIdAsync(string workflowInstanceId, CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowContextByWorkflowInstanceIdAsync(workflowInstanceId, cancellationToken);
         }

@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StartTestAutoposAsync(TestAutoposStartParams? body = default, CancellationToken cancellationToken = default)
         {
@@ -65,6 +67,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StartTestMagStripeAsync(TestMagStripeStartParams? body = default, CancellationToken cancellationToken = default)
         {
@@ -92,6 +96,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StartTestOcrAsync(TestOcrStartParams? body = default, CancellationToken cancellationToken = default)
         {
@@ -114,6 +120,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CancelTestAsync(CancellationToken cancellationToken = default)
         {
@@ -141,6 +149,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DiagnosticTaskState> GetTestStateAsync(DiagnosticTaskType? taskType = default, CancellationToken cancellationToken = default)
         {
@@ -170,6 +180,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StartTestTransportAsync(TestTransportStartParams? body = default, CancellationToken cancellationToken = default)
         {
@@ -190,6 +202,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ServiceApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartTestAutoposResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartTestAutoposResult> StartTestAutoposAsync(TestAutoposStartParams? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartTestAutoposAsync(body, cancellationToken).ConfigureAwait(false);
@@ -209,6 +223,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartTestMagStripeResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartTestMagStripeResult> StartTestMagStripeAsync(TestMagStripeStartParams? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartTestMagStripeAsync(body, cancellationToken).ConfigureAwait(false);
@@ -228,6 +244,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartTestOcrResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartTestOcrResult> StartTestOcrAsync(TestOcrStartParams? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartTestOcrAsync(body, cancellationToken).ConfigureAwait(false);
@@ -247,6 +265,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CancelTestResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CancelTestResult> CancelTestAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCancelTestAsync(cancellationToken).ConfigureAwait(false);
@@ -266,6 +286,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetTestStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetTestStateResult> GetTestStateAsync(DiagnosticTaskType? taskType = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetTestStateAsync(taskType, cancellationToken).ConfigureAwait(false);
@@ -294,6 +316,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartTestTransportResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartTestTransportResult> StartTestTransportAsync(TestTransportStartParams? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartTestTransportAsync(body, cancellationToken).ConfigureAwait(false);
@@ -320,21 +344,33 @@ namespace Aida.Api.Client {
 
             internal RawClient(ServiceApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartTestAutoposAsync(TestAutoposStartParams? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendStartTestAutoposAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartTestMagStripeAsync(TestMagStripeStartParams? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendStartTestMagStripeAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartTestOcrAsync(TestOcrStartParams? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendStartTestOcrAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CancelTestAsync(CancellationToken cancellationToken = default)
                 => _outer.SendCancelTestAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetTestStateAsync(DiagnosticTaskType? taskType = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetTestStateAsync(taskType, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartTestTransportAsync(TestTransportStartParams? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendStartTestTransportAsync(body, cancellationToken);
         }

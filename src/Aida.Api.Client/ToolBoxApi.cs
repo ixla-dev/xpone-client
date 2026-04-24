@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> CreateId1CalibrationTemplateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -67,9 +69,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Lasers and prints the grid for laser alignment on ID1
-        /// </summary>
+        /// <summary>Lasers and prints the grid for laser alignment on ID1</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> CreateId1CalibrationCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -99,9 +101,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Lasers and prints the 10mm template for laser calibration on ID3
-        /// </summary>
+        /// <summary>Lasers and prints the 10mm template for laser calibration on ID3</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> CreateId3CalibrationTemplate10mmAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -131,9 +133,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Lasers and prints the 10mm template for laser calibration on ID3
-        /// </summary>
+        /// <summary>Lasers and prints the 10mm template for laser calibration on ID3</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> CreateId3CalibrationTemplate5mmAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -163,9 +165,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Lasers and prints the grid for laser alignment on ID3
-        /// </summary>
+        /// <summary>Lasers and prints the grid for laser alignment on ID3</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> CreateId3CalibrationCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -195,6 +197,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<LaserWorkflowJobDto>> GetJobScheduledJobIdAsync(string? jobId = default, CancellationToken cancellationToken = default)
         {
@@ -224,6 +228,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MarkSystemAssetAsync(string? sjfFileName = default, CancellationToken cancellationToken = default)
         {
@@ -251,6 +257,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> PrintSystemAssetAsync(string? imagePath = default, CancellationToken cancellationToken = default)
         {
@@ -280,9 +288,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Lasers the grid for laser alignment on ID3
-        /// </summary>
+        /// <summary>Lasers the grid for laser alignment on ID3</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> LaserSightGridId3Async(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -312,9 +320,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Prints the grid for laser alignment on ID3
-        /// </summary>
+        /// <summary>Prints the grid for laser alignment on ID3</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<InkjetPrinterActionResult> PrintSightGridId3Async(string? scannerId = default, CancellationToken cancellationToken = default)
         {
@@ -337,6 +345,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ToolBoxApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateId1CalibrationTemplateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateId1CalibrationTemplateResult> CreateId1CalibrationTemplateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateId1CalibrationTemplateAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -365,9 +375,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Lasers and prints the grid for laser alignment on ID1
-            /// </summary>
+            /// <summary>Lasers and prints the grid for laser alignment on ID1</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateId1CalibrationCheckResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateId1CalibrationCheckResult> CreateId1CalibrationCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateId1CalibrationCheckAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -396,9 +406,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Lasers and prints the 10mm template for laser calibration on ID3
-            /// </summary>
+            /// <summary>Lasers and prints the 10mm template for laser calibration on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateId3CalibrationTemplate10mmResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateId3CalibrationTemplate10mmResult> CreateId3CalibrationTemplate10mmAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateId3CalibrationTemplate10mmAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -427,9 +437,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Lasers and prints the 10mm template for laser calibration on ID3
-            /// </summary>
+            /// <summary>Lasers and prints the 10mm template for laser calibration on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateId3CalibrationTemplate5mmResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateId3CalibrationTemplate5mmResult> CreateId3CalibrationTemplate5mmAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateId3CalibrationTemplate5mmAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -458,9 +468,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Lasers and prints the grid for laser alignment on ID3
-            /// </summary>
+            /// <summary>Lasers and prints the grid for laser alignment on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateId3CalibrationCheckResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateId3CalibrationCheckResult> CreateId3CalibrationCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateId3CalibrationCheckAsync(scannerId, cancellationToken).ConfigureAwait(false);
@@ -489,6 +499,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetJobScheduledJobIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetJobScheduledJobIdResult> GetJobScheduledJobIdAsync(string? jobId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetJobScheduledJobIdAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -517,6 +529,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MarkSystemAssetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MarkSystemAssetResult> MarkSystemAssetAsync(string? sjfFileName = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMarkSystemAssetAsync(sjfFileName, cancellationToken).ConfigureAwait(false);
@@ -536,6 +550,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.PrintSystemAssetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.PrintSystemAssetResult> PrintSystemAssetAsync(string? imagePath = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendPrintSystemAssetAsync(imagePath, cancellationToken).ConfigureAwait(false);
@@ -564,9 +580,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Lasers the grid for laser alignment on ID3
-            /// </summary>
+            /// <summary>Lasers the grid for laser alignment on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LaserSightGridId3Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LaserSightGridId3Result> LaserSightGridId3Async(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLaserSightGridId3Async(scannerId, cancellationToken).ConfigureAwait(false);
@@ -595,9 +611,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Prints the grid for laser alignment on ID3
-            /// </summary>
+            /// <summary>Prints the grid for laser alignment on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.PrintSightGridId3Result"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.PrintSightGridId3Result> PrintSightGridId3Async(string? scannerId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendPrintSightGridId3Async(scannerId, cancellationToken).ConfigureAwait(false);
@@ -633,51 +649,59 @@ namespace Aida.Api.Client {
 
             internal RawClient(ToolBoxApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateId1CalibrationTemplateAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateId1CalibrationTemplateAsync(scannerId, cancellationToken);
 
-            /// <summary>
-            /// Lasers and prints the grid for laser alignment on ID1
-            /// </summary>
+            /// <summary>Lasers and prints the grid for laser alignment on ID1</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateId1CalibrationCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateId1CalibrationCheckAsync(scannerId, cancellationToken);
 
-            /// <summary>
-            /// Lasers and prints the 10mm template for laser calibration on ID3
-            /// </summary>
+            /// <summary>Lasers and prints the 10mm template for laser calibration on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateId3CalibrationTemplate10mmAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateId3CalibrationTemplate10mmAsync(scannerId, cancellationToken);
 
-            /// <summary>
-            /// Lasers and prints the 10mm template for laser calibration on ID3
-            /// </summary>
+            /// <summary>Lasers and prints the 10mm template for laser calibration on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateId3CalibrationTemplate5mmAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateId3CalibrationTemplate5mmAsync(scannerId, cancellationToken);
 
-            /// <summary>
-            /// Lasers and prints the grid for laser alignment on ID3
-            /// </summary>
+            /// <summary>Lasers and prints the grid for laser alignment on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateId3CalibrationCheckAsync(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateId3CalibrationCheckAsync(scannerId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetJobScheduledJobIdAsync(string? jobId = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetJobScheduledJobIdAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MarkSystemAssetAsync(string? sjfFileName = default, CancellationToken cancellationToken = default)
                 => _outer.SendMarkSystemAssetAsync(sjfFileName, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> PrintSystemAssetAsync(string? imagePath = default, CancellationToken cancellationToken = default)
                 => _outer.SendPrintSystemAssetAsync(imagePath, cancellationToken);
 
-            /// <summary>
-            /// Lasers the grid for laser alignment on ID3
-            /// </summary>
+            /// <summary>Lasers the grid for laser alignment on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LaserSightGridId3Async(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendLaserSightGridId3Async(scannerId, cancellationToken);
 
-            /// <summary>
-            /// Prints the grid for laser alignment on ID3
-            /// </summary>
+            /// <summary>Prints the grid for laser alignment on ID3</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> PrintSightGridId3Async(string? scannerId = default, CancellationToken cancellationToken = default)
                 => _outer.SendPrintSightGridId3Async(scannerId, cancellationToken);
         }

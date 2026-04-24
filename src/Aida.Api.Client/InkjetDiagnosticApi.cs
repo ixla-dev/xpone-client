@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ToggleCappingShieldAsync(bool? moveUp = default, CancellationToken cancellationToken = default)
         {
@@ -65,6 +67,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ToggleCappingWiperAsync(bool? moveUp = default, CancellationToken cancellationToken = default)
         {
@@ -92,6 +96,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task InkjetDiagnosticSetCuringSettingsAsync(CuringSettingsRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -114,6 +120,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetCurrentLampColorAsync(CancellationToken cancellationToken = default)
         {
@@ -136,6 +144,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task FactoryResetMainBoardAsync(CancellationToken cancellationToken = default)
         {
@@ -158,6 +168,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ResetMainBoardOffsetsAsync(CancellationToken cancellationToken = default)
         {
@@ -185,6 +197,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MoveTransportAxisAsync(string? target = default, CancellationToken cancellationToken = default)
         {
@@ -212,6 +226,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task InkjetDiagnosticSetPinningSettingsAsync(bool? pinningEnabled = default, CancellationToken cancellationToken = default)
         {
@@ -234,6 +250,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task InkjetDiagnosticGetCuringSettingsAsync(CancellationToken cancellationToken = default)
         {
@@ -256,6 +274,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task InkjetDiagnosticGetPinningSettingsAsync(CancellationToken cancellationToken = default)
         {
@@ -278,6 +298,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SystemStatusDto> GetInkjetSystemStatusAsync(CancellationToken cancellationToken = default)
         {
@@ -300,6 +322,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(InkjetDiagnosticApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ToggleCappingShieldResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ToggleCappingShieldResult> ToggleCappingShieldAsync(bool? moveUp = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendToggleCappingShieldAsync(moveUp, cancellationToken).ConfigureAwait(false);
@@ -319,6 +343,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ToggleCappingWiperResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ToggleCappingWiperResult> ToggleCappingWiperAsync(bool? moveUp = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendToggleCappingWiperAsync(moveUp, cancellationToken).ConfigureAwait(false);
@@ -338,6 +364,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.InkjetDiagnosticSetCuringSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.InkjetDiagnosticSetCuringSettingsResult> InkjetDiagnosticSetCuringSettingsAsync(CuringSettingsRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendInkjetDiagnosticSetCuringSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -357,6 +385,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetCurrentLampColorResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetCurrentLampColorResult> GetCurrentLampColorAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetCurrentLampColorAsync(cancellationToken).ConfigureAwait(false);
@@ -376,6 +406,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FactoryResetMainBoardResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FactoryResetMainBoardResult> FactoryResetMainBoardAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFactoryResetMainBoardAsync(cancellationToken).ConfigureAwait(false);
@@ -395,6 +427,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ResetMainBoardOffsetsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ResetMainBoardOffsetsResult> ResetMainBoardOffsetsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendResetMainBoardOffsetsAsync(cancellationToken).ConfigureAwait(false);
@@ -414,6 +448,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MoveTransportAxisResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MoveTransportAxisResult> MoveTransportAxisAsync(string? target = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMoveTransportAxisAsync(target, cancellationToken).ConfigureAwait(false);
@@ -433,6 +469,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.InkjetDiagnosticSetPinningSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.InkjetDiagnosticSetPinningSettingsResult> InkjetDiagnosticSetPinningSettingsAsync(bool? pinningEnabled = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendInkjetDiagnosticSetPinningSettingsAsync(pinningEnabled, cancellationToken).ConfigureAwait(false);
@@ -452,6 +490,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.InkjetDiagnosticGetCuringSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.InkjetDiagnosticGetCuringSettingsResult> InkjetDiagnosticGetCuringSettingsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendInkjetDiagnosticGetCuringSettingsAsync(cancellationToken).ConfigureAwait(false);
@@ -471,6 +511,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.InkjetDiagnosticGetPinningSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.InkjetDiagnosticGetPinningSettingsResult> InkjetDiagnosticGetPinningSettingsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendInkjetDiagnosticGetPinningSettingsAsync(cancellationToken).ConfigureAwait(false);
@@ -490,6 +532,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetInkjetSystemStatusResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetInkjetSystemStatusResult> GetInkjetSystemStatusAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetInkjetSystemStatusAsync(cancellationToken).ConfigureAwait(false);
@@ -525,36 +569,58 @@ namespace Aida.Api.Client {
 
             internal RawClient(InkjetDiagnosticApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ToggleCappingShieldAsync(bool? moveUp = default, CancellationToken cancellationToken = default)
                 => _outer.SendToggleCappingShieldAsync(moveUp, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ToggleCappingWiperAsync(bool? moveUp = default, CancellationToken cancellationToken = default)
                 => _outer.SendToggleCappingWiperAsync(moveUp, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> InkjetDiagnosticSetCuringSettingsAsync(CuringSettingsRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendInkjetDiagnosticSetCuringSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetCurrentLampColorAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetCurrentLampColorAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FactoryResetMainBoardAsync(CancellationToken cancellationToken = default)
                 => _outer.SendFactoryResetMainBoardAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ResetMainBoardOffsetsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendResetMainBoardOffsetsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MoveTransportAxisAsync(string? target = default, CancellationToken cancellationToken = default)
                 => _outer.SendMoveTransportAxisAsync(target, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> InkjetDiagnosticSetPinningSettingsAsync(bool? pinningEnabled = default, CancellationToken cancellationToken = default)
                 => _outer.SendInkjetDiagnosticSetPinningSettingsAsync(pinningEnabled, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> InkjetDiagnosticGetCuringSettingsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendInkjetDiagnosticGetCuringSettingsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> InkjetDiagnosticGetPinningSettingsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendInkjetDiagnosticGetPinningSettingsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetInkjetSystemStatusAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetInkjetSystemStatusAsync(cancellationToken);
         }

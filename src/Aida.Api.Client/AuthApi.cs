@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ApiKeyDtoSearchResultDto> FindApiKeysAsync(SearchParameters? body = default, CancellationToken cancellationToken = default)
         {
@@ -87,6 +89,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task LoginAsync(LoginRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -109,6 +113,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task LogOutAsync(CancellationToken cancellationToken = default)
         {
@@ -156,6 +162,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>jwt token string</returns>
         /// <exception cref="ApiException{T}">Status 403 — deserialized as <see cref="string"/>.</exception>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<string> GetTokenAsync(GetTokenRequest? body = default, CancellationToken cancellationToken = default)
@@ -204,6 +212,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetUserAsync(CancellationToken cancellationToken = default)
         {
@@ -239,6 +249,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<IdentityResult> AddUserRoleAsync(AddUserRoleRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -263,6 +275,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<AidaUserDto>> FindUsersAsync(CancellationToken cancellationToken = default)
         {
@@ -304,6 +318,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<IdentityResult> CreateUserAsync(CreateUserRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -326,6 +342,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(AuthApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindApiKeysResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindApiKeysResult> FindApiKeysAsync(SearchParameters? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindApiKeysAsync(body, cancellationToken).ConfigureAwait(false);
@@ -354,6 +372,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoginResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoginResult> LoginAsync(LoginRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoginAsync(body, cancellationToken).ConfigureAwait(false);
@@ -373,6 +393,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LogOutResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LogOutResult> LogOutAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLogOutAsync(cancellationToken).ConfigureAwait(false);
@@ -392,6 +414,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetTokenResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetTokenResult> GetTokenAsync(GetTokenRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetTokenAsync(body, cancellationToken).ConfigureAwait(false);
@@ -433,6 +457,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetUserResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetUserResult> GetUserAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetUserAsync(cancellationToken).ConfigureAwait(false);
@@ -452,6 +478,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AddUserRoleResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AddUserRoleResult> AddUserRoleAsync(AddUserRoleRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAddUserRoleAsync(body, cancellationToken).ConfigureAwait(false);
@@ -480,6 +508,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FindUsersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FindUsersResult> FindUsersAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFindUsersAsync(cancellationToken).ConfigureAwait(false);
@@ -508,6 +538,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateUserResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateUserResult> CreateUserAsync(CreateUserRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateUserAsync(body, cancellationToken).ConfigureAwait(false);
@@ -543,27 +575,43 @@ namespace Aida.Api.Client {
 
             internal RawClient(AuthApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindApiKeysAsync(SearchParameters? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendFindApiKeysAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoginAsync(LoginRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoginAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LogOutAsync(CancellationToken cancellationToken = default)
                 => _outer.SendLogOutAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetTokenAsync(GetTokenRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetTokenAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetUserAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetUserAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AddUserRoleAsync(AddUserRoleRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAddUserRoleAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FindUsersAsync(CancellationToken cancellationToken = default)
                 => _outer.SendFindUsersAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateUserAsync(CreateUserRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendCreateUserAsync(body, cancellationToken);
         }

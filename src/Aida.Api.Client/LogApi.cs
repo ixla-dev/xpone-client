@@ -74,6 +74,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SearchLogsResultDto> GetLogsAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, global::System.Collections.Generic.IList<string>? levels = default, global::System.Collections.Generic.IList<string>? moduleNames = default, global::System.Collections.Generic.IList<string>? eventTypes = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -98,6 +100,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ClearLogsAsync(CancellationToken cancellationToken = default)
         {
@@ -120,6 +124,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ExportLogsAsync(CancellationToken cancellationToken = default)
         {
@@ -142,6 +148,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<LogFilterablesDto> GetFilterablesAsync(CancellationToken cancellationToken = default)
         {
@@ -164,6 +172,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(LogApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLogsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLogsResult> GetLogsAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, global::System.Collections.Generic.IList<string>? levels = default, global::System.Collections.Generic.IList<string>? moduleNames = default, global::System.Collections.Generic.IList<string>? eventTypes = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLogsAsync(startTimeStamp, endTimeStamp, levels, moduleNames, eventTypes, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -192,6 +202,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ClearLogsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ClearLogsResult> ClearLogsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendClearLogsAsync(cancellationToken).ConfigureAwait(false);
@@ -211,6 +223,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ExportLogsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ExportLogsResult> ExportLogsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendExportLogsAsync(cancellationToken).ConfigureAwait(false);
@@ -230,6 +244,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetFilterablesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetFilterablesResult> GetFilterablesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetFilterablesAsync(cancellationToken).ConfigureAwait(false);
@@ -265,15 +281,23 @@ namespace Aida.Api.Client {
 
             internal RawClient(LogApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLogsAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, global::System.Collections.Generic.IList<string>? levels = default, global::System.Collections.Generic.IList<string>? moduleNames = default, global::System.Collections.Generic.IList<string>? eventTypes = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetLogsAsync(startTimeStamp, endTimeStamp, levels, moduleNames, eventTypes, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ClearLogsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendClearLogsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ExportLogsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendExportLogsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetFilterablesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetFilterablesAsync(cancellationToken);
         }

@@ -42,6 +42,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -180,9 +182,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Returns the List of loaded layouts
-        /// </summary>
+        /// <summary>Returns the List of loaded layouts</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 422 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -303,9 +305,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Returns the current printer status
-        /// </summary>
+        /// <summary>Returns the current printer status</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 422 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -443,9 +445,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Loads a layout in SAMLight
-        /// </summary>
+        /// <summary>Loads a layout in SAMLight</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -597,9 +599,13 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Marks all the entities from the specified layout.
-        /// </summary>
+        /// <summary>Marks all the entities from the specified layout.</summary>
+        /// <remarks>In SAMLight coordinate system, 0,0 is at the center of the working area, Y increases upwards</remarks>
+        /// <param name="layoutName"></param>
+        /// <param name="offsetXMm">Offset X in millimeters</param>
+        /// <param name="offsetYMm">Offset Y in millimeters</param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -741,9 +747,10 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Removes a layout from the current job
-        /// </summary>
+        /// <summary>Removes a layout from the current job</summary>
+        /// <param name="layoutName">Unique name of the layout provided via M:IXLA.Box.Controllers.V1.XpOneApiController.LoadLayoutXpOne(IXLA.Modules.LaserBoard.ILaserBoard,IXLA.Box.XpOneController,Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)&gt;</param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -884,6 +891,8 @@ namespace Aida.Api.Client {
         /// Removes all layouts from the current job. This is equivalent
         /// to creating a new job ins SAMLight
         /// </summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -1024,6 +1033,8 @@ namespace Aida.Api.Client {
         /// Tells the system to begin personalization
         /// enables the laser source and change the system to personalization state
         /// </summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -1164,6 +1175,8 @@ namespace Aida.Api.Client {
         /// Tells the system to end personalization
         /// disables the laser source and change the system to ready state
         /// </summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -1300,9 +1313,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Tells the system to put the printer in the error state
-        /// </summary>
+        /// <summary>Tells the system to put the printer in the error state</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 422 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -1426,9 +1439,15 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Toggles on/off the LED illuminator
-        /// </summary>
+        /// <summary>Toggles on/off the LED illuminator</summary>
+        /// <remarks>
+        /// The internal LED illuminator is turned on automatically  during
+        /// system startup. You typically don't need to use this function.
+        /// It can be use-ful if a secondary IR/UV illuminator is mounted in the machine.
+        /// </remarks>
+        /// <param name="enable">True to turn it on, false to turn it off</param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -1581,9 +1600,10 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Updates entities in SAMLight.
-        /// </summary>
+        /// <summary>Updates entities in SAMLight.</summary>
+        /// <remarks>To update images, add the image filename as dataValue</remarks>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException{T}">Status 400 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 404 — deserialized as <see cref="ProblemDetails"/>.</exception>
         /// <exception cref="ApiException{T}">Status 409 — deserialized as <see cref="ProblemDetails"/>.</exception>
@@ -1718,6 +1738,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(XpOneApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ExecuteAutoPosXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ExecuteAutoPosXpOneResult> ExecuteAutoPosXpOneAsync(string? autoPosName = default, float? threshold = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendExecuteAutoPosXpOneAsync(autoPosName, threshold, cancellationToken).ConfigureAwait(false);
@@ -1824,9 +1846,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Returns the List of loaded layouts
-            /// </summary>
+            /// <summary>Returns the List of loaded layouts</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLayoutsAvailableXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLayoutsAvailableXpOneResult> GetLayoutsAvailableXpOneAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLayoutsAvailableXpOneAsync(cancellationToken).ConfigureAwait(false);
@@ -1920,9 +1942,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Returns the current printer status
-            /// </summary>
+            /// <summary>Returns the current printer status</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetXpOneStatusResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetXpOneStatusResult> GetXpOneStatusAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetXpOneStatusAsync(cancellationToken).ConfigureAwait(false);
@@ -2016,9 +2038,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Loads a layout in SAMLight
-            /// </summary>
+            /// <summary>Loads a layout in SAMLight</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LoadLayoutXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LoadLayoutXpOneResult> LoadLayoutXpOneAsync(LoadLayoutXpOneRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLoadLayoutXpOneAsync(body, cancellationToken).ConfigureAwait(false);
@@ -2125,9 +2147,13 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Marks all the entities from the specified layout.
-            /// </summary>
+            /// <summary>Marks all the entities from the specified layout.</summary>
+            /// <remarks>In SAMLight coordinate system, 0,0 is at the center of the working area, Y increases upwards</remarks>
+            /// <param name="layoutName"></param>
+            /// <param name="offsetXMm">Offset X in millimeters</param>
+            /// <param name="offsetYMm">Offset Y in millimeters</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MarkLayoutXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MarkLayoutXpOneResult> MarkLayoutXpOneAsync(string? layoutName = default, double? offsetXMm = default, double? offsetYMm = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMarkLayoutXpOneAsync(layoutName, offsetXMm, offsetYMm, cancellationToken).ConfigureAwait(false);
@@ -2225,9 +2251,10 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Removes a layout from the current job
-            /// </summary>
+            /// <summary>Removes a layout from the current job</summary>
+            /// <param name="layoutName">Unique name of the layout provided via M:IXLA.Box.Controllers.V1.XpOneApiController.LoadLayoutXpOne(IXLA.Modules.LaserBoard.ILaserBoard,IXLA.Box.XpOneController,Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)&gt;</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RemoveLayoutXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RemoveLayoutXpOneResult> RemoveLayoutXpOneAsync(string? layoutName = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRemoveLayoutXpOneAsync(layoutName, cancellationToken).ConfigureAwait(false);
@@ -2329,6 +2356,8 @@ namespace Aida.Api.Client {
             /// Removes all layouts from the current job. This is equivalent
             /// to creating a new job ins SAMLight
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ClearLayoutXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ClearLayoutXpOneResult> ClearLayoutXpOneAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendClearLayoutXpOneAsync(cancellationToken).ConfigureAwait(false);
@@ -2430,6 +2459,8 @@ namespace Aida.Api.Client {
             /// Tells the system to begin personalization
             /// enables the laser source and change the system to personalization state
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.PersonalizationBeginResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.PersonalizationBeginResult> PersonalizationBeginAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendPersonalizationBeginAsync(cancellationToken).ConfigureAwait(false);
@@ -2531,6 +2562,8 @@ namespace Aida.Api.Client {
             /// Tells the system to end personalization
             /// disables the laser source and change the system to ready state
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.PersonalizationEndResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.PersonalizationEndResult> PersonalizationEndAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendPersonalizationEndAsync(cancellationToken).ConfigureAwait(false);
@@ -2628,9 +2661,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Tells the system to put the printer in the error state
-            /// </summary>
+            /// <summary>Tells the system to put the printer in the error state</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetPersonalizationErrorXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetPersonalizationErrorXpOneResult> SetPersonalizationErrorXpOneAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetPersonalizationErrorXpOneAsync(cancellationToken).ConfigureAwait(false);
@@ -2715,9 +2748,15 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Toggles on/off the LED illuminator
-            /// </summary>
+            /// <summary>Toggles on/off the LED illuminator</summary>
+            /// <remarks>
+            /// The internal LED illuminator is turned on automatically  during
+            /// system startup. You typically don't need to use this function.
+            /// It can be use-ful if a secondary IR/UV illuminator is mounted in the machine.
+            /// </remarks>
+            /// <param name="enable">True to turn it on, false to turn it off</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ToggleLampXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ToggleLampXpOneResult> ToggleLampXpOneAsync(bool? enable = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendToggleLampXpOneAsync(enable, cancellationToken).ConfigureAwait(false);
@@ -2815,9 +2854,10 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Updates entities in SAMLight.
-            /// </summary>
+            /// <summary>Updates entities in SAMLight.</summary>
+            /// <remarks>To update images, add the image filename as dataValue</remarks>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateEntitiesXpOneResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateEntitiesXpOneResult> UpdateEntitiesXpOneAsync(UpdateEntitiesXpOneRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateEntitiesXpOneAsync(body, cancellationToken).ConfigureAwait(false);
@@ -2922,36 +2962,43 @@ namespace Aida.Api.Client {
 
             internal RawClient(XpOneApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ExecuteAutoPosXpOneAsync(string? autoPosName = default, float? threshold = default, CancellationToken cancellationToken = default)
                 => _outer.SendExecuteAutoPosXpOneAsync(autoPosName, threshold, cancellationToken);
 
-            /// <summary>
-            /// Returns the List of loaded layouts
-            /// </summary>
+            /// <summary>Returns the List of loaded layouts</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLayoutsAvailableXpOneAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetLayoutsAvailableXpOneAsync(cancellationToken);
 
-            /// <summary>
-            /// Returns the current printer status
-            /// </summary>
+            /// <summary>Returns the current printer status</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetXpOneStatusAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetXpOneStatusAsync(cancellationToken);
 
-            /// <summary>
-            /// Loads a layout in SAMLight
-            /// </summary>
+            /// <summary>Loads a layout in SAMLight</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LoadLayoutXpOneAsync(LoadLayoutXpOneRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendLoadLayoutXpOneAsync(body, cancellationToken);
 
-            /// <summary>
-            /// Marks all the entities from the specified layout.
-            /// </summary>
+            /// <summary>Marks all the entities from the specified layout.</summary>
+            /// <remarks>In SAMLight coordinate system, 0,0 is at the center of the working area, Y increases upwards</remarks>
+            /// <param name="layoutName"></param>
+            /// <param name="offsetXMm">Offset X in millimeters</param>
+            /// <param name="offsetYMm">Offset Y in millimeters</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MarkLayoutXpOneAsync(string? layoutName = default, double? offsetXMm = default, double? offsetYMm = default, CancellationToken cancellationToken = default)
                 => _outer.SendMarkLayoutXpOneAsync(layoutName, offsetXMm, offsetYMm, cancellationToken);
 
-            /// <summary>
-            /// Removes a layout from the current job
-            /// </summary>
+            /// <summary>Removes a layout from the current job</summary>
+            /// <param name="layoutName">Unique name of the layout provided via M:IXLA.Box.Controllers.V1.XpOneApiController.LoadLayoutXpOne(IXLA.Modules.LaserBoard.ILaserBoard,IXLA.Box.XpOneController,Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)&gt;</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RemoveLayoutXpOneAsync(string? layoutName = default, CancellationToken cancellationToken = default)
                 => _outer.SendRemoveLayoutXpOneAsync(layoutName, cancellationToken);
 
@@ -2959,6 +3006,8 @@ namespace Aida.Api.Client {
             /// Removes all layouts from the current job. This is equivalent
             /// to creating a new job ins SAMLight
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ClearLayoutXpOneAsync(CancellationToken cancellationToken = default)
                 => _outer.SendClearLayoutXpOneAsync(cancellationToken);
 
@@ -2966,6 +3015,8 @@ namespace Aida.Api.Client {
             /// Tells the system to begin personalization
             /// enables the laser source and change the system to personalization state
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> PersonalizationBeginAsync(CancellationToken cancellationToken = default)
                 => _outer.SendPersonalizationBeginAsync(cancellationToken);
 
@@ -2973,24 +3024,33 @@ namespace Aida.Api.Client {
             /// Tells the system to end personalization
             /// disables the laser source and change the system to ready state
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> PersonalizationEndAsync(CancellationToken cancellationToken = default)
                 => _outer.SendPersonalizationEndAsync(cancellationToken);
 
-            /// <summary>
-            /// Tells the system to put the printer in the error state
-            /// </summary>
+            /// <summary>Tells the system to put the printer in the error state</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetPersonalizationErrorXpOneAsync(CancellationToken cancellationToken = default)
                 => _outer.SendSetPersonalizationErrorXpOneAsync(cancellationToken);
 
-            /// <summary>
-            /// Toggles on/off the LED illuminator
-            /// </summary>
+            /// <summary>Toggles on/off the LED illuminator</summary>
+            /// <remarks>
+            /// The internal LED illuminator is turned on automatically  during
+            /// system startup. You typically don't need to use this function.
+            /// It can be use-ful if a secondary IR/UV illuminator is mounted in the machine.
+            /// </remarks>
+            /// <param name="enable">True to turn it on, false to turn it off</param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ToggleLampXpOneAsync(bool? enable = default, CancellationToken cancellationToken = default)
                 => _outer.SendToggleLampXpOneAsync(enable, cancellationToken);
 
-            /// <summary>
-            /// Updates entities in SAMLight.
-            /// </summary>
+            /// <summary>Updates entities in SAMLight.</summary>
+            /// <remarks>To update images, add the image filename as dataValue</remarks>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateEntitiesXpOneAsync(UpdateEntitiesXpOneRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateEntitiesXpOneAsync(body, cancellationToken);
         }

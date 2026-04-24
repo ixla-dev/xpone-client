@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<MagStripeDataDto> ReadDataAsync(CancellationToken cancellationToken = default)
         {
@@ -67,6 +69,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task WriteDataAsync(bool? useHiCoercivity = default, MagStripeDataDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -89,6 +93,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<MagneticStripeConfigurationDto> GetMagneticConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
         {
@@ -118,6 +124,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateMagneticConfigurationAsync(int jobTemplateId, MagneticStripeConfigurationDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -138,6 +146,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(MagneticEncoderApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReadDataResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReadDataResult> ReadDataAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReadDataAsync(cancellationToken).ConfigureAwait(false);
@@ -166,6 +176,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.WriteDataResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.WriteDataResult> WriteDataAsync(bool? useHiCoercivity = default, MagStripeDataDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendWriteDataAsync(useHiCoercivity, body, cancellationToken).ConfigureAwait(false);
@@ -185,6 +197,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetMagneticConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetMagneticConfigurationResult> GetMagneticConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetMagneticConfigurationAsync(jobTemplateId, cancellationToken).ConfigureAwait(false);
@@ -213,6 +227,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateMagneticConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateMagneticConfigurationResult> UpdateMagneticConfigurationAsync(int jobTemplateId, MagneticStripeConfigurationDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateMagneticConfigurationAsync(jobTemplateId, body, cancellationToken).ConfigureAwait(false);
@@ -239,15 +255,23 @@ namespace Aida.Api.Client {
 
             internal RawClient(MagneticEncoderApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReadDataAsync(CancellationToken cancellationToken = default)
                 => _outer.SendReadDataAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> WriteDataAsync(bool? useHiCoercivity = default, MagStripeDataDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendWriteDataAsync(useHiCoercivity, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetMagneticConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
                 => _outer.SendGetMagneticConfigurationAsync(jobTemplateId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateMagneticConfigurationAsync(int jobTemplateId, MagneticStripeConfigurationDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateMagneticConfigurationAsync(jobTemplateId, body, cancellationToken);
         }

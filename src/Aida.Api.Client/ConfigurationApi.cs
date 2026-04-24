@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IDictionary<string, string>> GetConfigurationKeysAsync(CancellationToken cancellationToken = default)
         {
@@ -57,6 +59,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<string> GetPrinterNameAsync(CancellationToken cancellationToken = default)
         {
@@ -81,6 +85,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ReloadConfigurationAsync(CancellationToken cancellationToken = default)
         {
@@ -113,6 +119,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateConfigFileAsync(string? scannerId = default, global::System.Collections.Generic.IList<FormFile>? body = default, CancellationToken cancellationToken = default)
         {
@@ -133,6 +141,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ConfigurationApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetConfigurationKeysResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetConfigurationKeysResult> GetConfigurationKeysAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetConfigurationKeysAsync(cancellationToken).ConfigureAwait(false);
@@ -161,6 +171,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPrinterNameResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPrinterNameResult> GetPrinterNameAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPrinterNameAsync(cancellationToken).ConfigureAwait(false);
@@ -189,6 +201,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReloadConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReloadConfigurationResult> ReloadConfigurationAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReloadConfigurationAsync(cancellationToken).ConfigureAwait(false);
@@ -208,6 +222,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateConfigFileResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateConfigFileResult> UpdateConfigFileAsync(string? scannerId = default, global::System.Collections.Generic.IList<FormFile>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateConfigFileAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -234,15 +250,23 @@ namespace Aida.Api.Client {
 
             internal RawClient(ConfigurationApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetConfigurationKeysAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetConfigurationKeysAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPrinterNameAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPrinterNameAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReloadConfigurationAsync(CancellationToken cancellationToken = default)
                 => _outer.SendReloadConfigurationAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateConfigFileAsync(string? scannerId = default, global::System.Collections.Generic.IList<FormFile>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateConfigFileAsync(scannerId, body, cancellationToken);
         }

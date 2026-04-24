@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CheckAsync(CancellationToken cancellationToken = default)
         {
@@ -53,6 +55,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(HealthCheckApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CheckResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CheckResult> CheckAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCheckAsync(cancellationToken).ConfigureAwait(false);
@@ -79,6 +83,8 @@ namespace Aida.Api.Client {
 
             internal RawClient(HealthCheckApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CheckAsync(CancellationToken cancellationToken = default)
                 => _outer.SendCheckAsync(cancellationToken);
         }

@@ -8,6 +8,7 @@ namespace Aida.Api.Client {
         public bool CmykDirectEnabled { get; set; }
 
         [JsonPropertyName("dropSize")]
+        [System.Obsolete]
         public int? DropSize { get; set; }
 
         [JsonPropertyName("enableC")]
@@ -38,6 +39,7 @@ namespace Aida.Api.Client {
         public PrintQuality PrintQuality { get; set; }
 
         [JsonPropertyName("printSpeed")]
+        [System.Obsolete]
         public int? PrintSpeed { get; set; }
 
         [JsonPropertyName("printerColorProfileId")]

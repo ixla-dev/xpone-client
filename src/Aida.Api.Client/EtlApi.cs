@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DataSourceConfigurationDto> CreateDataExchangeTableAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -57,6 +59,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IDictionary<string, global::System.Collections.Generic.IList<DataBindingDto>>> GetDataBindingsAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -81,6 +85,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<bool> DataSourceConfigurationIsValidAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -105,6 +111,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<EntityDescriptor>> GetEntityDescriptorsByJobTemplateIdAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -129,6 +137,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DataExchangeTableDefinition> GetDataExchangeTableDefinitionAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -153,6 +163,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DataSourceConfigurationDto> GenerateDataSourceAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -182,6 +194,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GenerateMockDatasetAsync(int jobId, global::System.Collections.Generic.IList<DataRecord>? body = default, CancellationToken cancellationToken = default)
         {
@@ -204,6 +218,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<string> GetTableDdlAsync(int jobId, CancellationToken cancellationToken = default)
         {
@@ -226,6 +242,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(EtlApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CreateDataExchangeTableResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CreateDataExchangeTableResult> CreateDataExchangeTableAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCreateDataExchangeTableAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -254,6 +272,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetDataBindingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetDataBindingsResult> GetDataBindingsAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetDataBindingsAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -282,6 +302,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DataSourceConfigurationIsValidResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DataSourceConfigurationIsValidResult> DataSourceConfigurationIsValidAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDataSourceConfigurationIsValidAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -310,6 +332,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetEntityDescriptorsByJobTemplateIdResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetEntityDescriptorsByJobTemplateIdResult> GetEntityDescriptorsByJobTemplateIdAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetEntityDescriptorsByJobTemplateIdAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -338,6 +362,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetDataExchangeTableDefinitionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetDataExchangeTableDefinitionResult> GetDataExchangeTableDefinitionAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetDataExchangeTableDefinitionAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -366,6 +392,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GenerateDataSourceResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GenerateDataSourceResult> GenerateDataSourceAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGenerateDataSourceAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -394,6 +422,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GenerateMockDatasetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GenerateMockDatasetResult> GenerateMockDatasetAsync(int jobId, global::System.Collections.Generic.IList<DataRecord>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGenerateMockDatasetAsync(jobId, body, cancellationToken).ConfigureAwait(false);
@@ -413,6 +443,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetTableDdlResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetTableDdlResult> GetTableDdlAsync(int jobId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetTableDdlAsync(jobId, cancellationToken).ConfigureAwait(false);
@@ -448,27 +480,43 @@ namespace Aida.Api.Client {
 
             internal RawClient(EtlApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CreateDataExchangeTableAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendCreateDataExchangeTableAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetDataBindingsAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendGetDataBindingsAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DataSourceConfigurationIsValidAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendDataSourceConfigurationIsValidAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetEntityDescriptorsByJobTemplateIdAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendGetEntityDescriptorsByJobTemplateIdAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetDataExchangeTableDefinitionAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendGetDataExchangeTableDefinitionAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GenerateDataSourceAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendGenerateDataSourceAsync(jobId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GenerateMockDatasetAsync(int jobId, global::System.Collections.Generic.IList<DataRecord>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendGenerateMockDatasetAsync(jobId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetTableDdlAsync(int jobId, CancellationToken cancellationToken = default)
                 => _outer.SendGetTableDdlAsync(jobId, cancellationToken);
         }

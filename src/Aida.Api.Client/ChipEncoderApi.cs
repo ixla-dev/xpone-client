@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ChipEncodingConfigurationDto> GetChipConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
         {
@@ -62,6 +64,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task UpdateChipConfigurationAsync(int jobTemplateId, ChipEncodingConfigurationDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -84,6 +88,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<ChipEncodingConfigurationDto> RemoveChipEncodingConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
         {
@@ -106,6 +112,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ChipEncoderApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetChipConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetChipConfigurationResult> GetChipConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetChipConfigurationAsync(jobTemplateId, cancellationToken).ConfigureAwait(false);
@@ -134,6 +142,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.UpdateChipConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.UpdateChipConfigurationResult> UpdateChipConfigurationAsync(int jobTemplateId, ChipEncodingConfigurationDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendUpdateChipConfigurationAsync(jobTemplateId, body, cancellationToken).ConfigureAwait(false);
@@ -153,6 +163,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.RemoveChipEncodingConfigurationResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.RemoveChipEncodingConfigurationResult> RemoveChipEncodingConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendRemoveChipEncodingConfigurationAsync(jobTemplateId, cancellationToken).ConfigureAwait(false);
@@ -188,12 +200,18 @@ namespace Aida.Api.Client {
 
             internal RawClient(ChipEncoderApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetChipConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
                 => _outer.SendGetChipConfigurationAsync(jobTemplateId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> UpdateChipConfigurationAsync(int jobTemplateId, ChipEncodingConfigurationDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendUpdateChipConfigurationAsync(jobTemplateId, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> RemoveChipEncodingConfigurationAsync(int jobTemplateId, CancellationToken cancellationToken = default)
                 => _outer.SendRemoveChipEncodingConfigurationAsync(jobTemplateId, cancellationToken);
         }

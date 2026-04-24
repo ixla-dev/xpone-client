@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AprintCreateNewJobAsync(CancellationToken cancellationToken = default)
         {
@@ -55,6 +57,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PrintSettingsDto> GetPrintSettingsAsync(CancellationToken cancellationToken = default)
         {
@@ -136,6 +140,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task AprintSetPrintSettingsAsync(AprintSetPrintSettingsRequest? body = default, CancellationToken cancellationToken = default)
         {
@@ -158,6 +164,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StartPrintAsync(CancellationToken cancellationToken = default)
         {
@@ -180,6 +188,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PrintStatusInfo> GetPrintStatusInfoAsync(CancellationToken cancellationToken = default)
         {
@@ -204,6 +214,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task StopPrintAsync(CancellationToken cancellationToken = default)
         {
@@ -226,6 +238,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<float> GetPrintHeadTemperatureAsync(CancellationToken cancellationToken = default)
         {
@@ -248,6 +262,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(APrintApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AprintCreateNewJobResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AprintCreateNewJobResult> AprintCreateNewJobAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAprintCreateNewJobAsync(cancellationToken).ConfigureAwait(false);
@@ -267,6 +283,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPrintSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPrintSettingsResult> GetPrintSettingsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPrintSettingsAsync(cancellationToken).ConfigureAwait(false);
@@ -295,6 +313,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.AprintSetPrintSettingsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.AprintSetPrintSettingsResult> AprintSetPrintSettingsAsync(AprintSetPrintSettingsRequest? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendAprintSetPrintSettingsAsync(body, cancellationToken).ConfigureAwait(false);
@@ -314,6 +334,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StartPrintResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StartPrintResult> StartPrintAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStartPrintAsync(cancellationToken).ConfigureAwait(false);
@@ -333,6 +355,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPrintStatusInfoResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPrintStatusInfoResult> GetPrintStatusInfoAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPrintStatusInfoAsync(cancellationToken).ConfigureAwait(false);
@@ -361,6 +385,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.StopPrintResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.StopPrintResult> StopPrintAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendStopPrintAsync(cancellationToken).ConfigureAwait(false);
@@ -380,6 +406,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPrintHeadTemperatureResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPrintHeadTemperatureResult> GetPrintHeadTemperatureAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPrintHeadTemperatureAsync(cancellationToken).ConfigureAwait(false);
@@ -415,24 +443,38 @@ namespace Aida.Api.Client {
 
             internal RawClient(APrintApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AprintCreateNewJobAsync(CancellationToken cancellationToken = default)
                 => _outer.SendAprintCreateNewJobAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPrintSettingsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPrintSettingsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> AprintSetPrintSettingsAsync(AprintSetPrintSettingsRequest? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendAprintSetPrintSettingsAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StartPrintAsync(CancellationToken cancellationToken = default)
                 => _outer.SendStartPrintAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPrintStatusInfoAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPrintStatusInfoAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> StopPrintAsync(CancellationToken cancellationToken = default)
                 => _outer.SendStopPrintAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPrintHeadTemperatureAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPrintHeadTemperatureAsync(cancellationToken);
         }

@@ -42,6 +42,8 @@ namespace Aida.Api.Client {
         /// AIDA Server invokes ScEstablishContext on startup. If for any reason the current context becomes invalid (usb cable
         /// disconnected for example) you can use this endpoint to re-establish a new PcScContext.
         /// </summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task EstablishContextAsync(SCardEstablishContextParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -64,9 +66,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Return the list of available readers
-        /// </summary>
+        /// <summary>Return the list of available readers</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<SCardReader>> GetReadersAsync(CancellationToken cancellationToken = default)
         {
@@ -91,9 +93,10 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Return the list of available readers
-        /// </summary>
+        /// <summary>Return the list of available readers</summary>
+        /// <param name="readerIndex"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SCardReader> GetReaderAsync(int readerIndex, CancellationToken cancellationToken = default)
         {
@@ -118,6 +121,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ReleaseContextAsync(CancellationToken cancellationToken = default)
         {
@@ -144,6 +149,8 @@ namespace Aida.Api.Client {
         /// Invokes SCardConnect on the specified reader and tries to read the ATR
         /// from the card currently present in the reader
         /// </summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<Stream> GetSmartCardAtrAsync(int readerIndex, CancellationToken cancellationToken = default)
         {
@@ -175,6 +182,10 @@ namespace Aida.Api.Client {
         /// Invoke SCardConnect on the specified reader. The card handle (hCard) is held server side
         /// until the next time Connect is invoked
         /// </summary>
+        /// <param name="readerIndex"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PcScConnectResult> SmartCardConnectAsync(int readerIndex, SCardConnectParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -204,9 +215,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Invoke SCardDisconnect on the specified reader
-        /// </summary>
+        /// <summary>Invoke SCardDisconnect on the specified reader</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PcscActionResultDto> SmartCardDisconnectAsync(int readerIndex, SCardDisconnectParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -236,9 +247,11 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Invoke SCardReconnect on the specified reader
-        /// </summary>
+        /// <summary>Invoke SCardReconnect on the specified reader</summary>
+        /// <param name="readerIndex"></param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SmartCardReconnectAsync(int readerIndex, SCardReconnectParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -261,9 +274,10 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Invoke SCardStatus on the specified reader
-        /// </summary>
+        /// <summary>Invoke SCardStatus on the specified reader</summary>
+        /// <param name="readerIndex"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<SCardState> GetSmartCardStatusAsync(int readerIndex, CancellationToken cancellationToken = default)
         {
@@ -293,9 +307,11 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Invoke SCardTransmit on the specified reader
-        /// </summary>
+        /// <summary>Invoke SCardTransmit on the specified reader</summary>
+        /// <param name="readerIndex">The reader id</param>
+        /// <param name="body"></param>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<Stream> TransmitAsync(int readerIndex, FormFile? body = default, CancellationToken cancellationToken = default)
         {
@@ -320,6 +336,8 @@ namespace Aida.Api.Client {
             /// AIDA Server invokes ScEstablishContext on startup. If for any reason the current context becomes invalid (usb cable
             /// disconnected for example) you can use this endpoint to re-establish a new PcScContext.
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EstablishContextResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EstablishContextResult> EstablishContextAsync(SCardEstablishContextParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEstablishContextAsync(body, cancellationToken).ConfigureAwait(false);
@@ -339,9 +357,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Return the list of available readers
-            /// </summary>
+            /// <summary>Return the list of available readers</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetReadersResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetReadersResult> GetReadersAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetReadersAsync(cancellationToken).ConfigureAwait(false);
@@ -370,9 +388,10 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Return the list of available readers
-            /// </summary>
+            /// <summary>Return the list of available readers</summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetReaderResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetReaderResult> GetReaderAsync(int readerIndex, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetReaderAsync(readerIndex, cancellationToken).ConfigureAwait(false);
@@ -401,6 +420,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReleaseContextResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReleaseContextResult> ReleaseContextAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReleaseContextAsync(cancellationToken).ConfigureAwait(false);
@@ -424,6 +445,8 @@ namespace Aida.Api.Client {
             /// Invokes SCardConnect on the specified reader and tries to read the ATR
             /// from the card currently present in the reader
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSmartCardAtrResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSmartCardAtrResult> GetSmartCardAtrAsync(int readerIndex, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSmartCardAtrAsync(readerIndex, cancellationToken).ConfigureAwait(false);
@@ -456,6 +479,10 @@ namespace Aida.Api.Client {
             /// Invoke SCardConnect on the specified reader. The card handle (hCard) is held server side
             /// until the next time Connect is invoked
             /// </summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="body"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SmartCardConnectResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SmartCardConnectResult> SmartCardConnectAsync(int readerIndex, SCardConnectParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSmartCardConnectAsync(readerIndex, body, cancellationToken).ConfigureAwait(false);
@@ -484,9 +511,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Invoke SCardDisconnect on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardDisconnect on the specified reader</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SmartCardDisconnectResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SmartCardDisconnectResult> SmartCardDisconnectAsync(int readerIndex, SCardDisconnectParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSmartCardDisconnectAsync(readerIndex, body, cancellationToken).ConfigureAwait(false);
@@ -515,9 +542,11 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Invoke SCardReconnect on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardReconnect on the specified reader</summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="body"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SmartCardReconnectResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SmartCardReconnectResult> SmartCardReconnectAsync(int readerIndex, SCardReconnectParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSmartCardReconnectAsync(readerIndex, body, cancellationToken).ConfigureAwait(false);
@@ -537,9 +566,10 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Invoke SCardStatus on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardStatus on the specified reader</summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetSmartCardStatusResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetSmartCardStatusResult> GetSmartCardStatusAsync(int readerIndex, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetSmartCardStatusAsync(readerIndex, cancellationToken).ConfigureAwait(false);
@@ -568,9 +598,11 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Invoke SCardTransmit on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardTransmit on the specified reader</summary>
+            /// <param name="readerIndex">The reader id</param>
+            /// <param name="body"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.TransmitResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.TransmitResult> TransmitAsync(int readerIndex, FormFile? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendTransmitAsync(readerIndex, body, cancellationToken).ConfigureAwait(false);
@@ -610,21 +642,26 @@ namespace Aida.Api.Client {
             /// AIDA Server invokes ScEstablishContext on startup. If for any reason the current context becomes invalid (usb cable
             /// disconnected for example) you can use this endpoint to re-establish a new PcScContext.
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EstablishContextAsync(SCardEstablishContextParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendEstablishContextAsync(body, cancellationToken);
 
-            /// <summary>
-            /// Return the list of available readers
-            /// </summary>
+            /// <summary>Return the list of available readers</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetReadersAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetReadersAsync(cancellationToken);
 
-            /// <summary>
-            /// Return the list of available readers
-            /// </summary>
+            /// <summary>Return the list of available readers</summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetReaderAsync(int readerIndex, CancellationToken cancellationToken = default)
                 => _outer.SendGetReaderAsync(readerIndex, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReleaseContextAsync(CancellationToken cancellationToken = default)
                 => _outer.SendReleaseContextAsync(cancellationToken);
 
@@ -632,6 +669,8 @@ namespace Aida.Api.Client {
             /// Invokes SCardConnect on the specified reader and tries to read the ATR
             /// from the card currently present in the reader
             /// </summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSmartCardAtrAsync(int readerIndex, CancellationToken cancellationToken = default)
                 => _outer.SendGetSmartCardAtrAsync(readerIndex, cancellationToken);
 
@@ -639,30 +678,39 @@ namespace Aida.Api.Client {
             /// Invoke SCardConnect on the specified reader. The card handle (hCard) is held server side
             /// until the next time Connect is invoked
             /// </summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="body"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SmartCardConnectAsync(int readerIndex, SCardConnectParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSmartCardConnectAsync(readerIndex, body, cancellationToken);
 
-            /// <summary>
-            /// Invoke SCardDisconnect on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardDisconnect on the specified reader</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SmartCardDisconnectAsync(int readerIndex, SCardDisconnectParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSmartCardDisconnectAsync(readerIndex, body, cancellationToken);
 
-            /// <summary>
-            /// Invoke SCardReconnect on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardReconnect on the specified reader</summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="body"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SmartCardReconnectAsync(int readerIndex, SCardReconnectParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSmartCardReconnectAsync(readerIndex, body, cancellationToken);
 
-            /// <summary>
-            /// Invoke SCardStatus on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardStatus on the specified reader</summary>
+            /// <param name="readerIndex"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetSmartCardStatusAsync(int readerIndex, CancellationToken cancellationToken = default)
                 => _outer.SendGetSmartCardStatusAsync(readerIndex, cancellationToken);
 
-            /// <summary>
-            /// Invoke SCardTransmit on the specified reader
-            /// </summary>
+            /// <summary>Invoke SCardTransmit on the specified reader</summary>
+            /// <param name="readerIndex">The reader id</param>
+            /// <param name="body"></param>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> TransmitAsync(int readerIndex, FormFile? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendTransmitAsync(readerIndex, body, cancellationToken);
         }

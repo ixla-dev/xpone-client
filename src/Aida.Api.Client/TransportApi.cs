@@ -42,6 +42,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task CanPerformMovementAsync(string? source = default, string? destination = default, CancellationToken cancellationToken = default)
         {
@@ -64,9 +66,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Used only in JUV module to signal when we remove the card from the shuttle
-        /// </summary>
+        /// <summary>Used only in JUV module to signal when we remove the card from the shuttle</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ClearCardTrackingStateAsync(CancellationToken cancellationToken = default)
         {
@@ -89,9 +91,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Connects the transport module
-        /// </summary>
+        /// <summary>Connects the transport module</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ConnectTransportAsync(CancellationToken cancellationToken = default)
         {
@@ -124,6 +126,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task BoxTransportCpuResetAsync(CancellationToken cancellationToken = default)
         {
@@ -146,9 +150,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Disconnects the transport module
-        /// </summary>
+        /// <summary>Disconnects the transport module</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DisconnectAsync(CancellationToken cancellationToken = default)
         {
@@ -181,6 +185,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task EjectAllCardsAsync(CancellationToken cancellationToken = default)
         {
@@ -208,6 +214,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task EjectCardAsync(string? source = default, CancellationToken cancellationToken = default)
         {
@@ -239,9 +247,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Moves a card from the Feeder to the desired destination
-        /// </summary>
+        /// <summary>Moves a card from the Feeder to the desired destination</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>Card moved correctly</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task FeedAsync(string? source = default, string? destination = default, CancellationToken cancellationToken = default)
         {
@@ -279,6 +287,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task Id5FlipCardAsync(string? sourcePosition = default, CancellationToken cancellationToken = default)
         {
@@ -306,6 +316,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task Id5MoveFlipAsync(FlipPosition? position = default, CancellationToken cancellationToken = default)
         {
@@ -328,6 +340,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TransportPositionDto>> GetMachineExistsAsync(CancellationToken cancellationToken = default)
         {
@@ -352,6 +366,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TransportPositionDto>> GetMachineInputsAsync(CancellationToken cancellationToken = default)
         {
@@ -376,6 +392,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<string> GetModuleStatusAsync(CancellationToken cancellationToken = default)
         {
@@ -405,6 +423,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetSerialNumberAsync(string id, string? body = default, CancellationToken cancellationToken = default)
         {
@@ -427,6 +447,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetBoxModuleTransportStateAsync(string moduleId, CancellationToken cancellationToken = default)
         {
@@ -449,9 +471,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Returns an object with the state of the whole transport
-        /// </summary>
+        /// <summary>Returns an object with the state of the whole transport</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TransportModuleState>> GetModulesAsync(CancellationToken cancellationToken = default)
         {
@@ -499,6 +521,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MoveAsync(SupportSide? feedSide = default, string? source = default, string? destination = default, CancellationToken cancellationToken = default)
         {
@@ -526,6 +550,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MoveFirstAvailableCardToPositionAsync(string? target = default, CancellationToken cancellationToken = default)
         {
@@ -557,6 +583,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<bool> PathExistAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
         {
@@ -590,6 +618,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetShortestPathAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
         {
@@ -621,6 +651,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ComputeShortestPathMovePlanAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
         {
@@ -648,6 +680,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TransportPositionDto>> GetTransportPositionsAsync(bool? includeAliases = default, CancellationToken cancellationToken = default)
         {
@@ -672,6 +706,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ResetAsync(CancellationToken cancellationToken = default)
         {
@@ -699,6 +735,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ShiftAsync(int? supportId = default, CancellationToken cancellationToken = default)
         {
@@ -721,6 +759,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TransportPositionDto>> GetAvailableSourcesAsync(CancellationToken cancellationToken = default)
         {
@@ -745,9 +785,9 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Returns a list of objects with the state of each module
-        /// </summary>
+        /// <summary>Returns a list of objects with the state of each module</summary>
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<TransportState> GetTransportStateAsync(CancellationToken cancellationToken = default)
         {
@@ -772,6 +812,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<TransportState> GetAidaV1TransportStateRealtimeAsync(CancellationToken cancellationToken = default)
         {
@@ -801,6 +843,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<TransportPositionDto>> GetAvailableTargetsAsync(string? source = default, CancellationToken cancellationToken = default)
         {
@@ -834,6 +878,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetPathInfoAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
         {
@@ -861,6 +907,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ReloadFeederAsync(int? n = default, CancellationToken cancellationToken = default)
         {
@@ -883,6 +931,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task FlipCardAsync(int moduleId, CancellationToken cancellationToken = default)
         {
@@ -905,6 +955,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ResetModuleAsync(string moduleId, CancellationToken cancellationToken = default)
         {
@@ -927,6 +979,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<TransportPositionDto> GetTransportPositionAsync(string position, CancellationToken cancellationToken = default)
         {
@@ -949,6 +1003,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(TransportApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.CanPerformMovementResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.CanPerformMovementResult> CanPerformMovementAsync(string? source = default, string? destination = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendCanPerformMovementAsync(source, destination, cancellationToken).ConfigureAwait(false);
@@ -968,9 +1024,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Used only in JUV module to signal when we remove the card from the shuttle
-            /// </summary>
+            /// <summary>Used only in JUV module to signal when we remove the card from the shuttle</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ClearCardTrackingStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ClearCardTrackingStateResult> ClearCardTrackingStateAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendClearCardTrackingStateAsync(cancellationToken).ConfigureAwait(false);
@@ -990,9 +1046,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Connects the transport module
-            /// </summary>
+            /// <summary>Connects the transport module</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ConnectTransportResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ConnectTransportResult> ConnectTransportAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendConnectTransportAsync(cancellationToken).ConfigureAwait(false);
@@ -1016,6 +1072,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.BoxTransportCpuResetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.BoxTransportCpuResetResult> BoxTransportCpuResetAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendBoxTransportCpuResetAsync(cancellationToken).ConfigureAwait(false);
@@ -1035,9 +1093,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Disconnects the transport module
-            /// </summary>
+            /// <summary>Disconnects the transport module</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DisconnectResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DisconnectResult> DisconnectAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDisconnectAsync(cancellationToken).ConfigureAwait(false);
@@ -1061,6 +1119,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EjectAllCardsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EjectAllCardsResult> EjectAllCardsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEjectAllCardsAsync(cancellationToken).ConfigureAwait(false);
@@ -1080,6 +1140,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.EjectCardResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.EjectCardResult> EjectCardAsync(string? source = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendEjectCardAsync(source, cancellationToken).ConfigureAwait(false);
@@ -1099,9 +1161,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Moves a card from the Feeder to the desired destination
-            /// </summary>
+            /// <summary>Moves a card from the Feeder to the desired destination</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FeedResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FeedResult> FeedAsync(string? source = default, string? destination = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFeedAsync(source, destination, cancellationToken).ConfigureAwait(false);
@@ -1125,6 +1187,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.Id5FlipCardResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.Id5FlipCardResult> Id5FlipCardAsync(string? sourcePosition = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendId5FlipCardAsync(sourcePosition, cancellationToken).ConfigureAwait(false);
@@ -1144,6 +1208,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.Id5MoveFlipResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.Id5MoveFlipResult> Id5MoveFlipAsync(FlipPosition? position = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendId5MoveFlipAsync(position, cancellationToken).ConfigureAwait(false);
@@ -1163,6 +1229,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetMachineExistsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetMachineExistsResult> GetMachineExistsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetMachineExistsAsync(cancellationToken).ConfigureAwait(false);
@@ -1191,6 +1259,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetMachineInputsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetMachineInputsResult> GetMachineInputsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetMachineInputsAsync(cancellationToken).ConfigureAwait(false);
@@ -1219,6 +1289,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetModuleStatusResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetModuleStatusResult> GetModuleStatusAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetModuleStatusAsync(cancellationToken).ConfigureAwait(false);
@@ -1247,6 +1319,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetSerialNumberResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetSerialNumberResult> SetSerialNumberAsync(string id, string? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetSerialNumberAsync(id, body, cancellationToken).ConfigureAwait(false);
@@ -1266,6 +1340,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetBoxModuleTransportStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetBoxModuleTransportStateResult> GetBoxModuleTransportStateAsync(string moduleId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetBoxModuleTransportStateAsync(moduleId, cancellationToken).ConfigureAwait(false);
@@ -1285,9 +1361,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Returns an object with the state of the whole transport
-            /// </summary>
+            /// <summary>Returns an object with the state of the whole transport</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetModulesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetModulesResult> GetModulesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetModulesAsync(cancellationToken).ConfigureAwait(false);
@@ -1320,6 +1396,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MoveResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MoveResult> MoveAsync(SupportSide? feedSide = default, string? source = default, string? destination = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMoveAsync(feedSide, source, destination, cancellationToken).ConfigureAwait(false);
@@ -1339,6 +1417,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MoveFirstAvailableCardToPositionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MoveFirstAvailableCardToPositionResult> MoveFirstAvailableCardToPositionAsync(string? target = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMoveFirstAvailableCardToPositionAsync(target, cancellationToken).ConfigureAwait(false);
@@ -1358,6 +1438,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.PathExistResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.PathExistResult> PathExistAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendPathExistAsync(source, target, cancellationToken).ConfigureAwait(false);
@@ -1386,6 +1468,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetShortestPathResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetShortestPathResult> GetShortestPathAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetShortestPathAsync(source, target, cancellationToken).ConfigureAwait(false);
@@ -1405,6 +1489,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ComputeShortestPathMovePlanResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ComputeShortestPathMovePlanResult> ComputeShortestPathMovePlanAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendComputeShortestPathMovePlanAsync(source, target, cancellationToken).ConfigureAwait(false);
@@ -1424,6 +1510,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetTransportPositionsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetTransportPositionsResult> GetTransportPositionsAsync(bool? includeAliases = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetTransportPositionsAsync(includeAliases, cancellationToken).ConfigureAwait(false);
@@ -1452,6 +1540,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ResetResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ResetResult> ResetAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendResetAsync(cancellationToken).ConfigureAwait(false);
@@ -1471,6 +1561,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShiftResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShiftResult> ShiftAsync(int? supportId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShiftAsync(supportId, cancellationToken).ConfigureAwait(false);
@@ -1490,6 +1582,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAvailableSourcesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAvailableSourcesResult> GetAvailableSourcesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAvailableSourcesAsync(cancellationToken).ConfigureAwait(false);
@@ -1518,9 +1612,9 @@ namespace Aida.Api.Client {
                 }
             }
 
-            /// <summary>
-            /// Returns a list of objects with the state of each module
-            /// </summary>
+            /// <summary>Returns a list of objects with the state of each module</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetTransportStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetTransportStateResult> GetTransportStateAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetTransportStateAsync(cancellationToken).ConfigureAwait(false);
@@ -1549,6 +1643,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAidaV1TransportStateRealtimeResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAidaV1TransportStateRealtimeResult> GetAidaV1TransportStateRealtimeAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAidaV1TransportStateRealtimeAsync(cancellationToken).ConfigureAwait(false);
@@ -1577,6 +1673,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetAvailableTargetsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetAvailableTargetsResult> GetAvailableTargetsAsync(string? source = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetAvailableTargetsAsync(source, cancellationToken).ConfigureAwait(false);
@@ -1605,6 +1703,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPathInfoResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPathInfoResult> GetPathInfoAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPathInfoAsync(source, target, cancellationToken).ConfigureAwait(false);
@@ -1624,6 +1724,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ReloadFeederResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ReloadFeederResult> ReloadFeederAsync(int? n = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendReloadFeederAsync(n, cancellationToken).ConfigureAwait(false);
@@ -1643,6 +1745,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.FlipCardResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.FlipCardResult> FlipCardAsync(int moduleId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendFlipCardAsync(moduleId, cancellationToken).ConfigureAwait(false);
@@ -1662,6 +1766,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ResetModuleResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ResetModuleResult> ResetModuleAsync(string moduleId, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendResetModuleAsync(moduleId, cancellationToken).ConfigureAwait(false);
@@ -1681,6 +1787,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetTransportPositionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetTransportPositionResult> GetTransportPositionAsync(string position, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetTransportPositionAsync(position, cancellationToken).ConfigureAwait(false);
@@ -1716,120 +1824,174 @@ namespace Aida.Api.Client {
 
             internal RawClient(TransportApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> CanPerformMovementAsync(string? source = default, string? destination = default, CancellationToken cancellationToken = default)
                 => _outer.SendCanPerformMovementAsync(source, destination, cancellationToken);
 
-            /// <summary>
-            /// Used only in JUV module to signal when we remove the card from the shuttle
-            /// </summary>
+            /// <summary>Used only in JUV module to signal when we remove the card from the shuttle</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ClearCardTrackingStateAsync(CancellationToken cancellationToken = default)
                 => _outer.SendClearCardTrackingStateAsync(cancellationToken);
 
-            /// <summary>
-            /// Connects the transport module
-            /// </summary>
+            /// <summary>Connects the transport module</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ConnectTransportAsync(CancellationToken cancellationToken = default)
                 => _outer.SendConnectTransportAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> BoxTransportCpuResetAsync(CancellationToken cancellationToken = default)
                 => _outer.SendBoxTransportCpuResetAsync(cancellationToken);
 
-            /// <summary>
-            /// Disconnects the transport module
-            /// </summary>
+            /// <summary>Disconnects the transport module</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DisconnectAsync(CancellationToken cancellationToken = default)
                 => _outer.SendDisconnectAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EjectAllCardsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendEjectAllCardsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> EjectCardAsync(string? source = default, CancellationToken cancellationToken = default)
                 => _outer.SendEjectCardAsync(source, cancellationToken);
 
-            /// <summary>
-            /// Moves a card from the Feeder to the desired destination
-            /// </summary>
+            /// <summary>Moves a card from the Feeder to the desired destination</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FeedAsync(string? source = default, string? destination = default, CancellationToken cancellationToken = default)
                 => _outer.SendFeedAsync(source, destination, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> Id5FlipCardAsync(string? sourcePosition = default, CancellationToken cancellationToken = default)
                 => _outer.SendId5FlipCardAsync(sourcePosition, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> Id5MoveFlipAsync(FlipPosition? position = default, CancellationToken cancellationToken = default)
                 => _outer.SendId5MoveFlipAsync(position, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetMachineExistsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetMachineExistsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetMachineInputsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetMachineInputsAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetModuleStatusAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetModuleStatusAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetSerialNumberAsync(string id, string? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetSerialNumberAsync(id, body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetBoxModuleTransportStateAsync(string moduleId, CancellationToken cancellationToken = default)
                 => _outer.SendGetBoxModuleTransportStateAsync(moduleId, cancellationToken);
 
-            /// <summary>
-            /// Returns an object with the state of the whole transport
-            /// </summary>
+            /// <summary>Returns an object with the state of the whole transport</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetModulesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetModulesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MoveAsync(SupportSide? feedSide = default, string? source = default, string? destination = default, CancellationToken cancellationToken = default)
                 => _outer.SendMoveAsync(feedSide, source, destination, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MoveFirstAvailableCardToPositionAsync(string? target = default, CancellationToken cancellationToken = default)
                 => _outer.SendMoveFirstAvailableCardToPositionAsync(target, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> PathExistAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
                 => _outer.SendPathExistAsync(source, target, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetShortestPathAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetShortestPathAsync(source, target, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ComputeShortestPathMovePlanAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
                 => _outer.SendComputeShortestPathMovePlanAsync(source, target, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetTransportPositionsAsync(bool? includeAliases = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetTransportPositionsAsync(includeAliases, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ResetAsync(CancellationToken cancellationToken = default)
                 => _outer.SendResetAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShiftAsync(int? supportId = default, CancellationToken cancellationToken = default)
                 => _outer.SendShiftAsync(supportId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAvailableSourcesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetAvailableSourcesAsync(cancellationToken);
 
-            /// <summary>
-            /// Returns a list of objects with the state of each module
-            /// </summary>
+            /// <summary>Returns a list of objects with the state of each module</summary>
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetTransportStateAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetTransportStateAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAidaV1TransportStateRealtimeAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetAidaV1TransportStateRealtimeAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetAvailableTargetsAsync(string? source = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetAvailableTargetsAsync(source, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPathInfoAsync(string? source = default, string? target = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetPathInfoAsync(source, target, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ReloadFeederAsync(int? n = default, CancellationToken cancellationToken = default)
                 => _outer.SendReloadFeederAsync(n, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> FlipCardAsync(int moduleId, CancellationToken cancellationToken = default)
                 => _outer.SendFlipCardAsync(moduleId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ResetModuleAsync(string moduleId, CancellationToken cancellationToken = default)
                 => _outer.SendResetModuleAsync(moduleId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetTransportPositionAsync(string position, CancellationToken cancellationToken = default)
                 => _outer.SendGetTransportPositionAsync(position, cancellationToken);
         }

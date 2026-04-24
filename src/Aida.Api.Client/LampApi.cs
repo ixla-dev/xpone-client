@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetLampStateAsync(LampState? state = default, CancellationToken cancellationToken = default)
         {
@@ -65,6 +67,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task SetLampStateAsync(LampState? state = default, CancellationToken cancellationToken = default)
         {
@@ -85,6 +89,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(LampApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetLampStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetLampStateResult> GetLampStateAsync(LampState? state = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetLampStateAsync(state, cancellationToken).ConfigureAwait(false);
@@ -104,6 +110,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetLampStateResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetLampStateResult> SetLampStateAsync(LampState? state = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetLampStateAsync(state, cancellationToken).ConfigureAwait(false);
@@ -130,9 +138,13 @@ namespace Aida.Api.Client {
 
             internal RawClient(LampApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetLampStateAsync(LampState? state = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetLampStateAsync(state, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetLampStateAsync(LampState? state = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetLampStateAsync(state, cancellationToken);
         }

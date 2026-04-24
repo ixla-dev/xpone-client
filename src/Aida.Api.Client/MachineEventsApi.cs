@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task LaserBoardStateChangedAsync(LaserBoardStateChangedEventNotification? body = default, CancellationToken cancellationToken = default)
         {
@@ -58,6 +60,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(MachineEventsApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.LaserBoardStateChangedResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.LaserBoardStateChangedResult> LaserBoardStateChangedAsync(LaserBoardStateChangedEventNotification? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLaserBoardStateChangedAsync(body, cancellationToken).ConfigureAwait(false);
@@ -84,6 +88,8 @@ namespace Aida.Api.Client {
 
             internal RawClient(MachineEventsApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> LaserBoardStateChangedAsync(LaserBoardStateChangedEventNotification? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendLaserBoardStateChangedAsync(body, cancellationToken);
         }

@@ -86,6 +86,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<JobTemplateAuditEntryDto>> GetJobTemplateAuditAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, int? jobTemplateId = default, global::System.Collections.Generic.IList<string>? operation = default, string? layoutName = default, string? ocrName = default, string? autoposName = default, string? webhookName = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -191,6 +193,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<WorkflowAuditEntryDto>> GetWorkflowAuditAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, int? jobTemplateId = default, string? workflowId = default, int? recordId = default, string? sessionId = default, global::System.Collections.Generic.IList<string>? operation = default, string? layoutName = default, string? ocrName = default, string? autoposName = default, string? webhookName = default, string? sourcePosition = default, string? position = default, bool? success = default, string? result = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
         {
@@ -213,6 +217,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(AuditApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetJobTemplateAuditResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetJobTemplateAuditResult> GetJobTemplateAuditAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, int? jobTemplateId = default, global::System.Collections.Generic.IList<string>? operation = default, string? layoutName = default, string? ocrName = default, string? autoposName = default, string? webhookName = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetJobTemplateAuditAsync(startTimeStamp, endTimeStamp, jobTemplateId, operation, layoutName, ocrName, autoposName, webhookName, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -241,6 +247,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetWorkflowAuditResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetWorkflowAuditResult> GetWorkflowAuditAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, int? jobTemplateId = default, string? workflowId = default, int? recordId = default, string? sessionId = default, global::System.Collections.Generic.IList<string>? operation = default, string? layoutName = default, string? ocrName = default, string? autoposName = default, string? webhookName = default, string? sourcePosition = default, string? position = default, bool? success = default, string? result = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetWorkflowAuditAsync(startTimeStamp, endTimeStamp, jobTemplateId, workflowId, recordId, sessionId, operation, layoutName, ocrName, autoposName, webhookName, sourcePosition, position, success, result, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken).ConfigureAwait(false);
@@ -276,9 +284,13 @@ namespace Aida.Api.Client {
 
             internal RawClient(AuditApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetJobTemplateAuditAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, int? jobTemplateId = default, global::System.Collections.Generic.IList<string>? operation = default, string? layoutName = default, string? ocrName = default, string? autoposName = default, string? webhookName = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetJobTemplateAuditAsync(startTimeStamp, endTimeStamp, jobTemplateId, operation, layoutName, ocrName, autoposName, webhookName, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetWorkflowAuditAsync(global::System.DateTimeOffset? startTimeStamp = default, global::System.DateTimeOffset? endTimeStamp = default, int? jobTemplateId = default, string? workflowId = default, int? recordId = default, string? sessionId = default, global::System.Collections.Generic.IList<string>? operation = default, string? layoutName = default, string? ocrName = default, string? autoposName = default, string? webhookName = default, string? sourcePosition = default, string? position = default, bool? success = default, string? result = default, int? page = default, int? pageSize = default, string? query = default, string? sortCriteriaPropertyName = default, SortDirection? sortCriteriaDirection = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetWorkflowAuditAsync(startTimeStamp, endTimeStamp, jobTemplateId, workflowId, recordId, sessionId, operation, layoutName, ocrName, autoposName, webhookName, sourcePosition, position, success, result, page, pageSize, query, sortCriteriaPropertyName, sortCriteriaDirection, cancellationToken);
         }

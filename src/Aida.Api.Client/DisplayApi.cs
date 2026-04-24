@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DisplayActionResult> SendDataAsync(FormFile? body = default, CancellationToken cancellationToken = default)
         {
@@ -67,6 +69,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DisplayActionResult> ShowErrorWindowAsync(ShowErrorWindowParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -96,6 +100,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DisplayActionResult> ShowMainWindowAsync(ShowMainWindowParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -125,6 +131,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<DisplayActionResult> ShowResetWindowAsync(ShowResetButtonParamsDto? body = default, CancellationToken cancellationToken = default)
         {
@@ -147,6 +155,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(DisplayApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SendDataResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SendDataResult> SendDataAsync(FormFile? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSendDataAsync(body, cancellationToken).ConfigureAwait(false);
@@ -175,6 +185,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShowErrorWindowResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShowErrorWindowResult> ShowErrorWindowAsync(ShowErrorWindowParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShowErrorWindowAsync(body, cancellationToken).ConfigureAwait(false);
@@ -203,6 +215,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShowMainWindowResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShowMainWindowResult> ShowMainWindowAsync(ShowMainWindowParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShowMainWindowAsync(body, cancellationToken).ConfigureAwait(false);
@@ -231,6 +245,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShowResetWindowResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShowResetWindowResult> ShowResetWindowAsync(ShowResetButtonParamsDto? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShowResetWindowAsync(body, cancellationToken).ConfigureAwait(false);
@@ -266,15 +282,23 @@ namespace Aida.Api.Client {
 
             internal RawClient(DisplayApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SendDataAsync(FormFile? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSendDataAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShowErrorWindowAsync(ShowErrorWindowParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendShowErrorWindowAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShowMainWindowAsync(ShowMainWindowParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendShowMainWindowAsync(body, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShowResetWindowAsync(ShowResetButtonParamsDto? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendShowResetWindowAsync(body, cancellationToken);
         }

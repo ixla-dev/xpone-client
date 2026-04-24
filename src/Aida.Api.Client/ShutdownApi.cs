@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ShutdownCancelAsync(CancellationToken cancellationToken = default)
         {
@@ -55,6 +57,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ShutdownConfirmAsync(CancellationToken cancellationToken = default)
         {
@@ -77,6 +81,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task GetShutdownStatusAsync(CancellationToken cancellationToken = default)
         {
@@ -99,6 +105,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ShutdownBoxAsync(CancellationToken cancellationToken = default)
         {
@@ -119,6 +127,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(ShutdownApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShutdownCancelResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShutdownCancelResult> ShutdownCancelAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShutdownCancelAsync(cancellationToken).ConfigureAwait(false);
@@ -138,6 +148,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShutdownConfirmResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShutdownConfirmResult> ShutdownConfirmAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShutdownConfirmAsync(cancellationToken).ConfigureAwait(false);
@@ -157,6 +169,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetShutdownStatusResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetShutdownStatusResult> GetShutdownStatusAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetShutdownStatusAsync(cancellationToken).ConfigureAwait(false);
@@ -176,6 +190,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ShutdownBoxResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ShutdownBoxResult> ShutdownBoxAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendShutdownBoxAsync(cancellationToken).ConfigureAwait(false);
@@ -202,15 +218,23 @@ namespace Aida.Api.Client {
 
             internal RawClient(ShutdownApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShutdownCancelAsync(CancellationToken cancellationToken = default)
                 => _outer.SendShutdownCancelAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShutdownConfirmAsync(CancellationToken cancellationToken = default)
                 => _outer.SendShutdownConfirmAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetShutdownStatusAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetShutdownStatusAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ShutdownBoxAsync(CancellationToken cancellationToken = default)
                 => _outer.SendShutdownBoxAsync(cancellationToken);
         }

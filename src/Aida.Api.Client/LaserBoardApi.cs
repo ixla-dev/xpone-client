@@ -38,6 +38,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task ChangeColorAsync(LampColors? color = default, CancellationToken cancellationToken = default)
         {
@@ -60,6 +62,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<PropertyDto>> GetPropertiesAsync(CancellationToken cancellationToken = default)
         {
@@ -94,6 +98,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<PropertyDto>> SetPropertiesAsync(string? scannerId = default, global::System.Collections.Generic.IList<PropertyDto>? body = default, CancellationToken cancellationToken = default)
         {
@@ -116,6 +122,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(LaserBoardApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.ChangeColorResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.ChangeColorResult> ChangeColorAsync(LampColors? color = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendChangeColorAsync(color, cancellationToken).ConfigureAwait(false);
@@ -135,6 +143,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPropertiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPropertiesResult> GetPropertiesAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPropertiesAsync(cancellationToken).ConfigureAwait(false);
@@ -163,6 +173,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.SetPropertiesResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.SetPropertiesResult> SetPropertiesAsync(string? scannerId = default, global::System.Collections.Generic.IList<PropertyDto>? body = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendSetPropertiesAsync(scannerId, body, cancellationToken).ConfigureAwait(false);
@@ -198,12 +210,18 @@ namespace Aida.Api.Client {
 
             internal RawClient(LaserBoardApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> ChangeColorAsync(LampColors? color = default, CancellationToken cancellationToken = default)
                 => _outer.SendChangeColorAsync(color, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPropertiesAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPropertiesAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> SetPropertiesAsync(string? scannerId = default, global::System.Collections.Generic.IList<PropertyDto>? body = default, CancellationToken cancellationToken = default)
                 => _outer.SendSetPropertiesAsync(scannerId, body, cancellationToken);
         }

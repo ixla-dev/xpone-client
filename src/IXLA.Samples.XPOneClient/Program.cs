@@ -160,8 +160,19 @@ Console.WriteLine(
      """
 );
 
-await xpOneApi.MarkLayoutXpOneAsync("PAGE_2", autoPosPage2.OffsetXMillimeters, -autoPosPage2.OffsetYMillimeters);
-await xpOneApi.MarkLayoutXpOneAsync("MLI_PAGE_2", autoPosMli.OffsetXMillimeters, -autoPosMli.OffsetYMillimeters);
+
+try
+{
+    await xpOneApi.MarkLayoutXpOneAsync("PAGE_2", autoPosPage2.OffsetXMillimeters, -autoPosPage2.OffsetYMillimeters);
+    Console.WriteLine("Mark layout PAGE_2 completed");
+    
+    await xpOneApi.MarkLayoutXpOneAsync("MLI_PAGE_2", autoPosMli.OffsetXMillimeters, -autoPosMli.OffsetYMillimeters);
+    Console.WriteLine("Mark layout MLI_PAGE_2 completed");
+}
+catch (Exception e)
+{
+    TerminateProgram(E_MARK_LAYOUT_FAILED);
+}
 
 /* ============= End Personalization ====================
 
@@ -175,6 +186,7 @@ await xpOneApi.MarkLayoutXpOneAsync("MLI_PAGE_2", autoPosMli.OffsetXMillimeters,
 
 await xpOneApi.PersonalizationEndAsync();
 
+await xpOneApi.ToggleLampXpOneAsync();
 Console.WriteLine("Personalization completed");
 
 return;
@@ -250,7 +262,6 @@ async Task LoadLayoutsAndUpdateEntitiesAsync()
         TerminateProgram(E_LOAD_LAYOUT_FAILED, e.Message);
     }
 
-    
 
     try
     {

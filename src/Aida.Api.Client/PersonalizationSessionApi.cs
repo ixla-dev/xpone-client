@@ -42,6 +42,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<PersonalizationSessionDto> GetPersonalizationSessionAsync(string? sessionId = default, bool? realTimeUpdate = default, CancellationToken cancellationToken = default)
         {
@@ -71,6 +73,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeletePersonalizationSessionAsync(string? sessionId = default, CancellationToken cancellationToken = default)
         {
@@ -102,6 +106,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<PersonalizationSessionEventDto>> GetPersonalizationSessionEventsAsync(string? sessionId = default, global::System.DateTimeOffset? startingFrom = default, CancellationToken cancellationToken = default)
         {
@@ -126,6 +132,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<PersoSessionAggregateDto>> Last30DaysAsync(CancellationToken cancellationToken = default)
         {
@@ -150,6 +158,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task<global::System.Collections.Generic.IList<PersonalizationSessionDto>> GetPersonalizationSessionsAsync(CancellationToken cancellationToken = default)
         {
@@ -172,6 +182,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(PersonalizationSessionApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPersonalizationSessionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPersonalizationSessionResult> GetPersonalizationSessionAsync(string? sessionId = default, bool? realTimeUpdate = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPersonalizationSessionAsync(sessionId, realTimeUpdate, cancellationToken).ConfigureAwait(false);
@@ -200,6 +212,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeletePersonalizationSessionResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeletePersonalizationSessionResult> DeletePersonalizationSessionAsync(string? sessionId = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeletePersonalizationSessionAsync(sessionId, cancellationToken).ConfigureAwait(false);
@@ -219,6 +233,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPersonalizationSessionEventsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPersonalizationSessionEventsResult> GetPersonalizationSessionEventsAsync(string? sessionId = default, global::System.DateTimeOffset? startingFrom = default, CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPersonalizationSessionEventsAsync(sessionId, startingFrom, cancellationToken).ConfigureAwait(false);
@@ -247,6 +263,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.Last30DaysResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.Last30DaysResult> Last30DaysAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendLast30DaysAsync(cancellationToken).ConfigureAwait(false);
@@ -275,6 +293,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.GetPersonalizationSessionsResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.GetPersonalizationSessionsResult> GetPersonalizationSessionsAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendGetPersonalizationSessionsAsync(cancellationToken).ConfigureAwait(false);
@@ -310,18 +330,28 @@ namespace Aida.Api.Client {
 
             internal RawClient(PersonalizationSessionApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPersonalizationSessionAsync(string? sessionId = default, bool? realTimeUpdate = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetPersonalizationSessionAsync(sessionId, realTimeUpdate, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeletePersonalizationSessionAsync(string? sessionId = default, CancellationToken cancellationToken = default)
                 => _outer.SendDeletePersonalizationSessionAsync(sessionId, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPersonalizationSessionEventsAsync(string? sessionId = default, global::System.DateTimeOffset? startingFrom = default, CancellationToken cancellationToken = default)
                 => _outer.SendGetPersonalizationSessionEventsAsync(sessionId, startingFrom, cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> Last30DaysAsync(CancellationToken cancellationToken = default)
                 => _outer.SendLast30DaysAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> GetPersonalizationSessionsAsync(CancellationToken cancellationToken = default)
                 => _outer.SendGetPersonalizationSessionsAsync(cancellationToken);
         }

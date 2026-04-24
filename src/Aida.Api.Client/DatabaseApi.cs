@@ -33,6 +33,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task MigrateDatabaseAsync(CancellationToken cancellationToken = default)
         {
@@ -55,6 +57,8 @@ namespace Aida.Api.Client {
             return await _http.SendAsync(__req, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+        /// <returns>OK</returns>
         /// <exception cref="ApiException">Any non-success status without a declared schema, or a declared schema that fails to deserialize.</exception>
         public async Task DeleteApplicationFilesAndDataAsync(CancellationToken cancellationToken = default)
         {
@@ -75,6 +79,8 @@ namespace Aida.Api.Client {
 
             internal ResultsClient(DatabaseApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.MigrateDatabaseResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.MigrateDatabaseResult> MigrateDatabaseAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendMigrateDatabaseAsync(cancellationToken).ConfigureAwait(false);
@@ -94,6 +100,8 @@ namespace Aida.Api.Client {
                 }
             }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>A discriminated &lt;see cref="global::Aida.Api.Client.Responses.DeleteApplicationFilesAndDataResult"/&gt; that never throws for modeled statuses.</returns>
             public async Task<global::Aida.Api.Client.Responses.DeleteApplicationFilesAndDataResult> DeleteApplicationFilesAndDataAsync(CancellationToken cancellationToken = default)
             {
                 using var __resp = await _outer.SendDeleteApplicationFilesAndDataAsync(cancellationToken).ConfigureAwait(false);
@@ -120,9 +128,13 @@ namespace Aida.Api.Client {
 
             internal RawClient(DatabaseApi outer) { _outer = outer; }
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> MigrateDatabaseAsync(CancellationToken cancellationToken = default)
                 => _outer.SendMigrateDatabaseAsync(cancellationToken);
 
+            /// <param name="cancellationToken">Token to observe while waiting for the HTTP call to complete.</param>
+            /// <returns>The raw &lt;see cref="HttpResponseMessage"/&gt;. Caller owns disposal and status handling.</returns>
             public Task<HttpResponseMessage> DeleteApplicationFilesAndDataAsync(CancellationToken cancellationToken = default)
                 => _outer.SendDeleteApplicationFilesAndDataAsync(cancellationToken);
         }
